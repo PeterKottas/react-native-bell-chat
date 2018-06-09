@@ -184,7 +184,8 @@ class Chat extends React.Component<ChatProps, ChatState> {
           maxWidth: 850,
           margin: 0,
           marginLeft: 'auto',
-          marginRight: 'auto'
+          marginRight: 'auto',
+          height: '100%'
         }}
       >
         <Text style={{ textAlign: 'center', fontSize: 48 }}>react-native-bell-chat</Text>
@@ -210,19 +211,18 @@ class Chat extends React.Component<ChatProps, ChatState> {
         >
           npm i -S react-native-bell-chat
         </Text>
-        <div
-          className="chatfeed-wrapper"
-        /*style={{
-          shadowColor: 'rgba(0, 0, 0, .08)',
-          shadowOffset: { width: 20, height: 20 },
-          shadowRadius: 20,
-          margin: 0,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          borderWidth: 1,
-          borderColor: '#ddd',
-          paddingBottom: 20,
-        }}*/
+        <View
+          style={{
+            shadowColor: 'rgba(0, 0, 0, .08)',
+            shadowOffset: { width: 20, height: 20 },
+            shadowRadius: 20,
+            margin: 0,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            borderWidth: 1,
+            borderColor: '#ddd',
+            paddingBottom: 20,
+          }}
         >
           <ChatFeed
             yourAuthorId={0}
@@ -436,7 +436,7 @@ class Chat extends React.Component<ChatProps, ChatState> {
               <Text style={[styles.buttonText, (this.state.hasOldMessages ? styles.buttonTextSelected : {})]}>Has more messages</Text>
             </TouchableHighlight>
           </View>
-        </div>
+        </View>
       </View>
     );
   }

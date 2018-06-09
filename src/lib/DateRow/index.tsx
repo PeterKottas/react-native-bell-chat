@@ -1,30 +1,30 @@
 import * as React from 'react';
+import { StyleProp, TextStyle, Text } from 'react-native';
 
 const styles = {
   container: {
     textAlign: 'center',
     fontSize: 12,
     color: 'rgba(0, 0, 0, 0.55)'
-  } as React.CSSProperties,
+  } as StyleProp<TextStyle>,
 };
 
 export interface DateRowProps {
   date: Date;
-  containerStyles?: React.CSSProperties;
+  containerStyles?: StyleProp<TextStyle>;
 }
 
 const DateRow = (props: DateRowProps) => {
   return props.date && (
-    <div
-      className="react-native-bell-chat__date-row"
-      style={{
-        ...styles.container,
-        ...props.containerStyles
-      }}
-      title={props.date.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+    <Text
+      style={[
+        styles.container,
+        props.containerStyles
+      ]}
+      /*title={props.date.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}*/
     >
       {props.date.toLocaleDateString()}
-    </div>
+    </Text>
   );
 };
 

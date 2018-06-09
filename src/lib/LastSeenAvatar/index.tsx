@@ -1,43 +1,46 @@
 import * as React from 'react';
 import { Author } from '../Author';
+import { StyleProp, ViewStyle, View, Text, TextStyle } from 'react-native';
 
 export interface LastSeenAvatarProps {
   author: Author;
-  containerStyle?: React.CSSProperties;
+  containerStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
 }
 
 const styles = {
   container: {
     width: 20,
     height: 20,
-    lineHeight: '20px',
-    fontWeight: 400,
-    fontSize: 10,
     color: 'white',
     backgroundColor: 'rgb(153, 153, 153)',
     borderRadius: 10,
     textAlign: 'center',
     transition: '0.3s all ease-in-out',
-    display: 'block',
-    position: 'relative'
-  } as React.CSSProperties
+  } as StyleProp<ViewStyle>,
+  text: {
+    fontSize: 10,
+    lineHeight: 20,
+    fontWeight: '400',
+  } as StyleProp<TextStyle>
 };
 
 const LastSeenAvatar: React.SFC<LastSeenAvatarProps> = props => props.author && (
-  <div
-    style={{
-      ...styles.container,
-      ...props.containerStyle
-    }}
-    className="react-native-bell-chat__last-seen-avatar"
+  <View
+    style={[
+      styles.container,
+      props.containerStyle
+    ]}
   >
-    <span style={{ pointerEvents: 'none' }}>{
-      props.author.lastSeenAvatarName ?
-        props.author.lastSeenAvatarName
-        :
-        props.author.name[0].toUpperCase()}
-    </span>
-  </div>
+    <Text
+      style={[]}
+    >{
+        props.author.lastSeenAvatarName ?
+          props.author.lastSeenAvatarName
+          :
+          props.author.name[0].toUpperCase()}
+    </Text>
+  </View>
 );
 
 export default LastSeenAvatar;

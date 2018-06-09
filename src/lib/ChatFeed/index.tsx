@@ -17,6 +17,7 @@ import { groupBy } from '../utils/utils';
 import DateRow, { DateRowProps } from '../DateRow';
 import LoadingMessages, { LoadingMessagesProps } from '../LoadingMessages';
 import SystemChatBubble from '../SystemChatBubble';
+import { View, StyleProp, ViewStyle } from 'react-native';
 
 // Model for ChatFeed props.
 
@@ -45,9 +46,9 @@ export interface ChatFeedProps {
   showLoadingMessages?: boolean;
 
   // Extra container styles for custom components
-  showRecipientAvatarChatMessagesStyle?: React.CSSProperties;
-  showRecipientLastSeenMessageChatMessagesStyle?: React.CSSProperties;
-  showIsTypingChatMessagesStyle?: React.CSSProperties;
+  showRecipientAvatarChatMessagesStyle?: StyleProp<ViewStyle>;
+  showRecipientLastSeenMessageChatMessagesStyle?: StyleProp<ViewStyle>;
+  showIsTypingChatMessagesStyle?: StyleProp<ViewStyle>;
 
   // Custom components
   customLoadingMessages?: (props: LoadingMessagesProps) => JSX.Element;
@@ -219,11 +220,10 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
    */
   render() {
     return (
-      <div
-        id={'react-native-bell-chat__chat-panel ' + (this.props.className ? this.props.className : '')}
-        style={{
-          ...styles.chatPanel
-        }}
+      <View
+        style={[
+          styles.chatPanel
+        ]}
       >
         <this.props.customScrollArea
           minHeight={this.props.minHeight}
@@ -232,24 +232,23 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
           loadOldMessagesThreshold={this.props.loadOldMessagesThreshold}
           onLoadOldMessages={this.onLoadOldMessages}
         >
-          <div
-            style={{
-              ...styles.chatMessages,
-              ...(this.props.showRecipientAvatar && styles.showRecipientAvatarChatMessagesStyle),
-              ...(this.props.showRecipientAvatar && this.props.showRecipientAvatarChatMessagesStyle),
-              ...(this.props.showIsTyping && styles.showIsTypingChatMessagesStyle),
-              ...(this.props.showIsTyping && this.props.showIsTypingChatMessagesStyle),
-              ...(this.props.showRecipientLastSeenMessage && styles.showRecipientLastSeenMessageChatMessagesStyle),
-              ...(this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle),
-            }}
-            className="react-native-bell-chat__chat-messages"
+          <View
+            style={[
+              styles.chatMessages,
+              (this.props.showRecipientAvatar && styles.showRecipientAvatarChatMessagesStyle),
+              (this.props.showRecipientAvatar && this.props.showRecipientAvatarChatMessagesStyle),
+              (this.props.showIsTyping && styles.showIsTypingChatMessagesStyle),
+              (this.props.showIsTyping && this.props.showIsTypingChatMessagesStyle),
+              (this.props.showRecipientLastSeenMessage && styles.showRecipientLastSeenMessageChatMessagesStyle),
+              (this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle),
+            ]}
           >
             {<this.props.customLoadingMessages isVisible={this.props.showLoadingMessages || this.state.isLoadingMessages} />}
             {this.renderMessages(this.props.messages)}
             {this.props.showIsTyping && this.renderIsTyping()}
-          </div>
+          </View>
         </this.props.customScrollArea>
-      </div>
+      </View>
     );
   }
 

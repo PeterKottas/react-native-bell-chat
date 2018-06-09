@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { StyleProp, ViewStyle, View } from 'react-native';
 
 const styles = {
   containerStyles: {
     display: 'flex',
     marginBottom: 10
-  },
+  } as StyleProp<ViewStyle>,
 };
 
 export interface LoadingMessagesProps {
-  containerStyles?: object;
+  containerStyles?: StyleProp<ViewStyle>;
   spinnerColor?: string;
   isVisible: boolean;
 }
@@ -16,7 +17,7 @@ export interface LoadingMessagesProps {
 const LoadingMessages: React.SFC<LoadingMessagesProps> = (props: LoadingMessagesProps) => {
   const { containerStyles } = props;
   return (
-    <div className="react-native-bell-chat__loading-messages" style={{ ...styles.containerStyles, ...containerStyles }}>
+    <View style={[ styles.containerStyles, containerStyles ]}>
       <svg
         width="40px"
         height="40px"
@@ -48,7 +49,7 @@ const LoadingMessages: React.SFC<LoadingMessagesProps> = (props: LoadingMessages
           />
         </path>
       </svg>
-    </div>
+    </View>
   );
 };
 LoadingMessages.defaultProps = {

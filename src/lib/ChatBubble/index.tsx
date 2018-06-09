@@ -3,6 +3,7 @@ import styles from './styles';
 import Message from '../Message';
 import { Author } from '../Author';
 import { LastSeenAvatarProps } from './../LastSeenAvatar';
+import { View, StyleProp, ViewStyle, TextStyle, Text } from 'react-native';
 
 const defaultBubbleStyles: ChatBubbleStyles = {
   userBubble: {},
@@ -17,15 +18,15 @@ const defaultBubbleStyles: ChatBubbleStyles = {
 };
 export { defaultBubbleStyles };
 export interface ChatBubbleStyles {
-  userBubble?: React.CSSProperties;
-  recipientBubble?: React.CSSProperties;
-  chatBubble?: React.CSSProperties;
-  text?: React.CSSProperties;
-  createdOn?: React.CSSProperties;
-  recipientCreatedOn?: React.CSSProperties;
+  userBubble?: StyleProp<ViewStyle>;
+  recipientBubble?: StyleProp<ViewStyle>;
+  chatBubble?: StyleProp<ViewStyle>;
+  text?: StyleProp<TextStyle>;
+  createdOn?: StyleProp<TextStyle>;
+  recipientCreatedOn?: StyleProp<TextStyle>;
   loadingSpinnerColor?: string;
   isSendIconColor?: string;
-  systemChatBubbleContainerStyle?: React.CSSProperties;
+  systemChatBubbleContainerStyle?: StyleProp<ViewStyle>;
 }
 
 export interface ChatBubbleProps {
@@ -65,44 +66,41 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
     const youAreAuthor = this.props.message.authorId === yourAuthorId;
 
     // message.id 0 is reserved for blue
-    const chatBubbleStyles: React.CSSProperties = {
-      ...styles.chatBubble,
-      ...(youAreAuthor ? {} : styles.recipientChatBubble),
-      ...(youAreAuthor ? styles.chatBubbleOrientationNormal : styles.recipientChatBubbleOrientationNormal),
-      ...(this.props.isFirstInGroup && (youAreAuthor ? styles.firstChatBubbleInGroup : styles.recipientFirstChatBubbleInGroup)),
-      ...(this.props.isLastInGroup && (youAreAuthor ? styles.lastChatBubbleInGroup : styles.recipientLastChatBubbleInGroup)),
-      ...(this.props.isCenterInGroup && (youAreAuthor ? styles.centerChatBubbleInGroup : styles.recipientCenterChatBubbleInGroup)),
-      ...chatBubble,
-      ...(youAreAuthor ? userBubble : recipientBubble),
-    };
+    const chatBubbleStyles: StyleProp<ViewStyle>[] = [
+      styles.chatBubble,
+      (youAreAuthor ? {} : styles.recipientChatBubble),
+      (youAreAuthor ? styles.chatBubbleOrientationNormal : styles.recipientChatBubbleOrientationNormal),
+      (this.props.isFirstInGroup && (youAreAuthor ? styles.firstChatBubbleInGroup : styles.recipientFirstChatBubbleInGroup)),
+      (this.props.isLastInGroup && (youAreAuthor ? styles.lastChatBubbleInGroup : styles.recipientLastChatBubbleInGroup)),
+      (this.props.isCenterInGroup && (youAreAuthor ? styles.centerChatBubbleInGroup : styles.recipientCenterChatBubbleInGroup)),
+      chatBubble,
+      (youAreAuthor ? userBubble : recipientBubble),
+    ];
 
     return (
-      <div
-        style={{
-          ...styles.chatBubbleWrapper,
-        }}
-        className="react-native-bell-chat__chat-bubble"
+      <View
+        style={[
+          styles.chatBubbleWrapper,
+        ]}
       >
-        <div style={chatBubbleStyles}>
-          <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
+        <View style={[...chatBubbleStyles]}>
+          <Text style={[ styles.p, text ]}>{this.props.message.message}</Text>
           {this.props.message.createdOn && (
-            <span
-              className="react-native-bell-chat__chat-bubble__created-on"
-              style={{
-                ...styles.createdOn,
-                ...(youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
-              }}
-              title={this.props.message.createdOn.toLocaleString()}
+            <Text
+              style={[
+                styles.createdOn,
+                (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
+              ]}
+              /*title={this.props.message.createdOn.toLocaleString()}*/
             >{this.props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
-            </span>
+            </Text>
           )}
           {this.props.message.isSend !== undefined && youAreAuthor && (
-            <span
-              className="react-native-bell-chat__chat-bubble__is-send"
-              style={{
-                ...styles.isSend,
-              }}
-              title={this.props.message.isSend ? 'Send' : 'Sending'}
+            <Text
+              style={[
+                styles.isSend,
+              ]}
+              /*title={this.props.message.isSend ? 'Send' : 'Sending'}*/
             >
               {this.props.message.isSend ?
                 <svg
@@ -148,18 +146,17 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
                   </path>
                 </svg>
               }
-            </span>
+            </Text>
           )}
-        </div>
+        </View>
         {this.props.showRecipientLastSeenMessage && this.props.lastSeenByAuthors &&
           this.props.lastSeenByAuthors.length > 0 && this.props.customLastSeenAvatar &&
           (
-            <div
-              className="react-native-bell-chat__chat-bubble__last-seen-by__container"
+            <View
               style={styles.lastSeenByContainer}
-              onMouseEnter={() => this.setState({ mouseOverLastSeenContainer: true })}
+              /*onMouseEnter={() => this.setState({ mouseOverLastSeenContainer: true })}
               onMouseLeave={() => this.setState({ mouseOverLastSeenContainer: false })}
-              title={'Last seen by ' + this.props.lastSeenByAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and')}
+              title={'Last seen by ' + this.props.lastSeenByAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and')}*/
             >
               {this.props.lastSeenByAuthors.map((a, i) => (
                 <this.props.customLastSeenAvatar
@@ -171,9 +168,9 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
                   }}
                 />
               ))}
-            </div>
+            </View>
           )}
-      </div>
+      </View>
     );
   }
 }

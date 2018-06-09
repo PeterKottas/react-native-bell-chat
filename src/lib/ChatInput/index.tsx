@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TextInput, View } from 'react-native';
 
 const styles = {
   chatInput: {
@@ -24,9 +25,9 @@ export interface ChatInputProps {
 const ChatInput = (props: ChatInputProps) => {
   const { inputStyles, inputPlaceholder } = props;
   return (
-    <div className="react-native-bell-chat__chat-input" style={styles.chatInput}>
-      <input type="text" style={inputStyles || styles.inputStyle} placeholder={inputPlaceholder} />
-    </div>
+    <View style={styles.chatInput}>
+      <TextInput style={[inputStyles || styles.inputStyle]} placeholder={inputPlaceholder} />
+    </View>
   );
 };
 
