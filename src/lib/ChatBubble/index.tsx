@@ -20,6 +20,8 @@ export { defaultBubbleStyles };
 export interface ChatBubbleStyles {
   userBubble?: StyleProp<ViewStyle>;
   recipientBubble?: StyleProp<ViewStyle>;
+  userText?: StyleProp<TextStyle>;
+  recipientText?: StyleProp<TextStyle>;
   chatBubble?: StyleProp<ViewStyle>;
   text?: StyleProp<TextStyle>;
   createdOn?: StyleProp<TextStyle>;
@@ -84,7 +86,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
         ]}
       >
         <View style={[...chatBubbleStyles]}>
-          <Text style={[ styles.p, text ]}>{this.props.message.message}</Text>
+          <Text style={[ styles.p, text, (youAreAuthor ? bubbleStyles.userText : bubbleStyles.recipientText) ]}>{this.props.message.message}</Text>
           {this.props.message.createdOn && (
             <Text
               style={[

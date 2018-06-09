@@ -4900,7 +4900,7 @@ class ChatBubble extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubbleWrapper,
             ] },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["g" /* View */], { style: [...chatBubbleStyles] },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [__WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].p, text] }, this.props.message.message),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [__WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].p, text, (youAreAuthor ? bubbleStyles.userText : bubbleStyles.recipientText)] }, this.props.message.message),
                 this.props.message.createdOn && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [
                         __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].createdOn,
                         (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
