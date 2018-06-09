@@ -390,10 +390,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyLayout__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__filterSupportedProps__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant__);
@@ -1071,7 +1071,398 @@ module.exports = emptyFunction;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(24);
+/* unused harmony export DatePickerIOS */
+/* unused harmony export DrawerLayoutAndroid */
+/* unused harmony export ImageEditor */
+/* unused harmony export ImageStore */
+/* unused harmony export InputAccessoryView */
+/* unused harmony export MaskedViewIOS */
+/* unused harmony export NavigatorIOS */
+/* unused harmony export PickerIOS */
+/* unused harmony export ProgressBarAndroid */
+/* unused harmony export ProgressViewIOS */
+/* unused harmony export SegmentedControlIOS */
+/* unused harmony export SnapshotViewIOS */
+/* unused harmony export TabBarIOS */
+/* unused harmony export ToastAndroid */
+/* unused harmony export ToolbarAndroid */
+/* unused harmony export ViewPagerAndroid */
+/* unused harmony export WebView */
+/* unused harmony export ActionSheetIOS */
+/* unused harmony export AlertIOS */
+/* unused harmony export CameraRoll */
+/* unused harmony export DatePickerAndroid */
+/* unused harmony export ImagePickerIOS */
+/* unused harmony export PermissionsAndroid */
+/* unused harmony export PushNotificationIOS */
+/* unused harmony export Settings */
+/* unused harmony export StatusBarIOS */
+/* unused harmony export Systrace */
+/* unused harmony export TimePickerAndroid */
+/* unused harmony export TVEventHandler */
+/* unused harmony export VibrationIOS */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_createElement__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_processColor__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_render__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_unmountComponentAtNode__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports_NativeModules__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__exports_TextPropTypes__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__exports_ViewPropTypes__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__exports_AccessibilityInfo__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__exports_Alert__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__exports_Animated__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__exports_AppState__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exports_AsyncStorage__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__exports_BackHandler__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__exports_Clipboard__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__exports_DeviceInfo__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__exports_Dimensions__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__exports_Easing__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__exports_I18nManager__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__exports_Keyboard__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__exports_InteractionManager__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__exports_LayoutAnimation__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__exports_Linking__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__exports_NativeEventEmitter__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__exports_NetInfo__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__exports_PanResponder__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__exports_PixelRatio__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__exports_Platform__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__exports_Share__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__exports_StyleSheet__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__exports_UIManager__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__exports_Vibration__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__exports_ActivityIndicator__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__exports_ART__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__exports_Button__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__exports_CheckBox__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__exports_FlatList__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__exports_Image__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__exports_ImageBackground__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__exports_KeyboardAvoidingView__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__exports_ListView__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__exports_Modal__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__exports_Picker__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__exports_ProgressBar__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__exports_RefreshControl__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__exports_SafeAreaView__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__exports_SectionList__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__exports_Slider__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__exports_StatusBar__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__exports_SwipeableFlatList__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__exports_SwipeableListView__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__exports_Switch__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__exports_Text__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__exports_Touchable__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__exports_TouchableNativeFeedback__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__exports_TouchableOpacity__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__exports_TouchableWithoutFeedback__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__exports_View__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__exports_VirtualizedList__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__exports_YellowBox__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__exports_ColorPropType__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__exports_EdgeInsetsPropType__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__exports_PointPropType__ = __webpack_require__(296);
+/* unused harmony reexport createElement */
+/* unused harmony reexport findNodeHandle */
+/* unused harmony reexport render */
+/* unused harmony reexport unmountComponentAtNode */
+/* unused harmony reexport processColor */
+/* unused harmony reexport NativeModules */
+/* unused harmony reexport TextPropTypes */
+/* unused harmony reexport ViewPropTypes */
+/* unused harmony reexport AccessibilityInfo */
+/* unused harmony reexport Alert */
+/* unused harmony reexport Animated */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__["a"]; });
+/* unused harmony reexport AppState */
+/* unused harmony reexport AsyncStorage */
+/* unused harmony reexport BackHandler */
+/* unused harmony reexport Clipboard */
+/* unused harmony reexport DeviceInfo */
+/* unused harmony reexport Dimensions */
+/* unused harmony reexport Easing */
+/* unused harmony reexport I18nManager */
+/* unused harmony reexport InteractionManager */
+/* unused harmony reexport Keyboard */
+/* unused harmony reexport LayoutAnimation */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_24__exports_Linking__["a"]; });
+/* unused harmony reexport NativeEventEmitter */
+/* unused harmony reexport NetInfo */
+/* unused harmony reexport PanResponder */
+/* unused harmony reexport PixelRatio */
+/* unused harmony reexport Platform */
+/* unused harmony reexport Share */
+/* unused harmony reexport StyleSheet */
+/* unused harmony reexport UIManager */
+/* unused harmony reexport Vibration */
+/* unused harmony reexport ActivityIndicator */
+/* unused harmony reexport ART */
+/* unused harmony reexport Button */
+/* unused harmony reexport CheckBox */
+/* unused harmony reexport FlatList */
+/* unused harmony reexport Image */
+/* unused harmony reexport ImageBackground */
+/* unused harmony reexport KeyboardAvoidingView */
+/* unused harmony reexport ListView */
+/* unused harmony reexport Modal */
+/* unused harmony reexport Picker */
+/* unused harmony reexport ProgressBar */
+/* unused harmony reexport RefreshControl */
+/* unused harmony reexport SafeAreaView */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__["a"]; });
+/* unused harmony reexport SectionList */
+/* unused harmony reexport Slider */
+/* unused harmony reexport StatusBar */
+/* unused harmony reexport SwipeableFlatList */
+/* unused harmony reexport SwipeableListView */
+/* unused harmony reexport Switch */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_55__exports_Text__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__["a"]; });
+/* unused harmony reexport Touchable */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__["a"]; });
+/* unused harmony reexport TouchableNativeFeedback */
+/* unused harmony reexport TouchableOpacity */
+/* unused harmony reexport TouchableWithoutFeedback */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_62__exports_View__["a"]; });
+/* unused harmony reexport VirtualizedList */
+/* unused harmony reexport YellowBox */
+/* unused harmony reexport ColorPropType */
+/* unused harmony reexport EdgeInsetsPropType */
+/* unused harmony reexport PointPropType */
+
+
+
+
+
+
+
+
+
+
+
+// APIs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// propTypes
+
+
+
+
+var emptyObject = {};
+// compat (components)
+var DatePickerIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var DrawerLayoutAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ImageEditor = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ImageStore = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var InputAccessoryView = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var MaskedViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var NavigatorIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var PickerIOS = __WEBPACK_IMPORTED_MODULE_44__exports_Picker__["a" /* default */];
+var ProgressBarAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ProgressViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var SegmentedControlIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var SnapshotViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var TabBarIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ToastAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ToolbarAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var ViewPagerAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+var WebView = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
+// compat (apis)
+var ActionSheetIOS = emptyObject;
+var AlertIOS = emptyObject;
+var CameraRoll = emptyObject;
+var DatePickerAndroid = emptyObject;
+var ImagePickerIOS = emptyObject;
+var PermissionsAndroid = emptyObject;
+var PushNotificationIOS = emptyObject;
+var Settings = emptyObject;
+var StatusBarIOS = emptyObject;
+var Systrace = emptyObject;
+var TimePickerAndroid = emptyObject;
+var TVEventHandler = emptyObject;
+var VibrationIOS = emptyObject;
+
+
+
+var ReactNative = {
+  // top-level API
+  createElement: __WEBPACK_IMPORTED_MODULE_1__exports_createElement__["a" /* default */],
+  findNodeHandle: __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__["a" /* default */],
+  render: __WEBPACK_IMPORTED_MODULE_4__exports_render__["a" /* default */],
+  unmountComponentAtNode: __WEBPACK_IMPORTED_MODULE_5__exports_unmountComponentAtNode__["a" /* default */],
+  // modules
+  processColor: __WEBPACK_IMPORTED_MODULE_3__exports_processColor__["a" /* default */],
+  NativeModules: __WEBPACK_IMPORTED_MODULE_6__exports_NativeModules__["a" /* default */],
+  TextPropTypes: __WEBPACK_IMPORTED_MODULE_7__exports_TextPropTypes__["a" /* default */],
+  ViewPropTypes: __WEBPACK_IMPORTED_MODULE_8__exports_ViewPropTypes__["a" /* default */],
+  // APIs
+  AccessibilityInfo: __WEBPACK_IMPORTED_MODULE_9__exports_AccessibilityInfo__["a" /* default */],
+  Alert: __WEBPACK_IMPORTED_MODULE_10__exports_Alert__["a" /* default */],
+  Animated: __WEBPACK_IMPORTED_MODULE_11__exports_Animated__["a" /* default */],
+  AppRegistry: __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__["a" /* default */],
+  AppState: __WEBPACK_IMPORTED_MODULE_13__exports_AppState__["a" /* default */],
+  AsyncStorage: __WEBPACK_IMPORTED_MODULE_14__exports_AsyncStorage__["a" /* default */],
+  BackHandler: __WEBPACK_IMPORTED_MODULE_15__exports_BackHandler__["a" /* default */],
+  Clipboard: __WEBPACK_IMPORTED_MODULE_16__exports_Clipboard__["a" /* default */],
+  DeviceInfo: __WEBPACK_IMPORTED_MODULE_17__exports_DeviceInfo__["a" /* default */],
+  Dimensions: __WEBPACK_IMPORTED_MODULE_18__exports_Dimensions__["a" /* default */],
+  Easing: __WEBPACK_IMPORTED_MODULE_19__exports_Easing__["a" /* default */],
+  I18nManager: __WEBPACK_IMPORTED_MODULE_20__exports_I18nManager__["a" /* default */],
+  InteractionManager: __WEBPACK_IMPORTED_MODULE_22__exports_InteractionManager__["a" /* default */],
+  Keyboard: __WEBPACK_IMPORTED_MODULE_21__exports_Keyboard__["a" /* default */],
+  LayoutAnimation: __WEBPACK_IMPORTED_MODULE_23__exports_LayoutAnimation__["a" /* default */],
+  Linking: __WEBPACK_IMPORTED_MODULE_24__exports_Linking__["a" /* default */],
+  NativeEventEmitter: __WEBPACK_IMPORTED_MODULE_25__exports_NativeEventEmitter__["a" /* default */],
+  NetInfo: __WEBPACK_IMPORTED_MODULE_26__exports_NetInfo__["a" /* default */],
+  PanResponder: __WEBPACK_IMPORTED_MODULE_27__exports_PanResponder__["a" /* default */],
+  PixelRatio: __WEBPACK_IMPORTED_MODULE_28__exports_PixelRatio__["a" /* default */],
+  Platform: __WEBPACK_IMPORTED_MODULE_29__exports_Platform__["a" /* default */],
+  Share: __WEBPACK_IMPORTED_MODULE_30__exports_Share__["a" /* default */],
+  StyleSheet: __WEBPACK_IMPORTED_MODULE_31__exports_StyleSheet__["a" /* default */],
+  UIManager: __WEBPACK_IMPORTED_MODULE_32__exports_UIManager__["a" /* default */],
+  Vibration: __WEBPACK_IMPORTED_MODULE_33__exports_Vibration__["a" /* default */],
+  // components
+  ActivityIndicator: __WEBPACK_IMPORTED_MODULE_34__exports_ActivityIndicator__["a" /* default */],
+  ART: __WEBPACK_IMPORTED_MODULE_35__exports_ART__["a" /* default */],
+  Button: __WEBPACK_IMPORTED_MODULE_36__exports_Button__["a" /* default */],
+  CheckBox: __WEBPACK_IMPORTED_MODULE_37__exports_CheckBox__["a" /* default */],
+  FlatList: __WEBPACK_IMPORTED_MODULE_38__exports_FlatList__["a" /* default */],
+  Image: __WEBPACK_IMPORTED_MODULE_39__exports_Image__["a" /* default */],
+  ImageBackground: __WEBPACK_IMPORTED_MODULE_40__exports_ImageBackground__["a" /* default */],
+  KeyboardAvoidingView: __WEBPACK_IMPORTED_MODULE_41__exports_KeyboardAvoidingView__["a" /* default */],
+  ListView: __WEBPACK_IMPORTED_MODULE_42__exports_ListView__["a" /* default */],
+  Modal: __WEBPACK_IMPORTED_MODULE_43__exports_Modal__["a" /* default */],
+  Picker: __WEBPACK_IMPORTED_MODULE_44__exports_Picker__["a" /* default */],
+  ProgressBar: __WEBPACK_IMPORTED_MODULE_45__exports_ProgressBar__["a" /* default */],
+  RefreshControl: __WEBPACK_IMPORTED_MODULE_46__exports_RefreshControl__["a" /* default */],
+  SafeAreaView: __WEBPACK_IMPORTED_MODULE_47__exports_SafeAreaView__["a" /* default */],
+  ScrollView: __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__["a" /* default */],
+  SectionList: __WEBPACK_IMPORTED_MODULE_49__exports_SectionList__["a" /* default */],
+  Slider: __WEBPACK_IMPORTED_MODULE_50__exports_Slider__["a" /* default */],
+  StatusBar: __WEBPACK_IMPORTED_MODULE_51__exports_StatusBar__["a" /* default */],
+  SwipeableFlatList: __WEBPACK_IMPORTED_MODULE_52__exports_SwipeableFlatList__["a" /* default */],
+  SwipeableListView: __WEBPACK_IMPORTED_MODULE_53__exports_SwipeableListView__["a" /* default */],
+  Switch: __WEBPACK_IMPORTED_MODULE_54__exports_Switch__["a" /* default */],
+  Text: __WEBPACK_IMPORTED_MODULE_55__exports_Text__["a" /* default */],
+  TextInput: __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__["a" /* default */],
+  Touchable: __WEBPACK_IMPORTED_MODULE_57__exports_Touchable__["a" /* default */],
+  TouchableHighlight: __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__["a" /* default */],
+  TouchableNativeFeedback: __WEBPACK_IMPORTED_MODULE_59__exports_TouchableNativeFeedback__["a" /* default */],
+  TouchableOpacity: __WEBPACK_IMPORTED_MODULE_60__exports_TouchableOpacity__["a" /* default */],
+  TouchableWithoutFeedback: __WEBPACK_IMPORTED_MODULE_61__exports_TouchableWithoutFeedback__["a" /* default */],
+  View: __WEBPACK_IMPORTED_MODULE_62__exports_View__["a" /* default */],
+  VirtualizedList: __WEBPACK_IMPORTED_MODULE_63__exports_VirtualizedList__["a" /* default */],
+  YellowBox: __WEBPACK_IMPORTED_MODULE_64__exports_YellowBox__["a" /* default */],
+  // propTypes
+  ColorPropType: __WEBPACK_IMPORTED_MODULE_65__exports_ColorPropType__["a" /* default */],
+  EdgeInsetsPropType: __WEBPACK_IMPORTED_MODULE_66__exports_EdgeInsetsPropType__["a" /* default */],
+  PointPropType: __WEBPACK_IMPORTED_MODULE_67__exports_PointPropType__["a" /* default */],
+  // compat (components)
+  DatePickerIOS: DatePickerIOS,
+  DrawerLayoutAndroid: DrawerLayoutAndroid,
+  ImageEditor: ImageEditor,
+  ImageStore: ImageStore,
+  InputAccessoryView: InputAccessoryView,
+  MaskedViewIOS: MaskedViewIOS,
+  NavigatorIOS: NavigatorIOS,
+  PickerIOS: PickerIOS,
+  ProgressBarAndroid: ProgressBarAndroid,
+  ProgressViewIOS: ProgressViewIOS,
+  SegmentedControlIOS: SegmentedControlIOS,
+  SnapshotViewIOS: SnapshotViewIOS,
+  TabBarIOS: TabBarIOS,
+  ToastAndroid: ToastAndroid,
+  ToolbarAndroid: ToolbarAndroid,
+  ViewPagerAndroid: ViewPagerAndroid,
+  WebView: WebView,
+  // compat (apis)
+  ActionSheetIOS: ActionSheetIOS,
+  AlertIOS: AlertIOS,
+  CameraRoll: CameraRoll,
+  DatePickerAndroid: DatePickerAndroid,
+  ImagePickerIOS: ImagePickerIOS,
+  PermissionsAndroid: PermissionsAndroid,
+  PushNotificationIOS: PushNotificationIOS,
+  Settings: Settings,
+  StatusBarIOS: StatusBarIOS,
+  Systrace: Systrace,
+  TimePickerAndroid: TimePickerAndroid,
+  TVEventHandler: TVEventHandler,
+  VibrationIOS: VibrationIOS
+};
+
+/* unused harmony default export */ var _unused_webpack_default_export = (ReactNative);
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
@@ -1086,7 +1477,7 @@ module.exports = emptyFunction;
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_dom__["findDOMNode"]);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1114,7 +1505,7 @@ var applyNativeMethods = function applyNativeMethods(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (applyNativeMethods);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1211,7 +1602,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1332,7 +1723,7 @@ var UIManager = {
 /* harmony default export */ __webpack_exports__["a"] = (UIManager);
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1430,7 +1821,7 @@ var AnimatedWithChildren = function (_AnimatedNode) {
 /* harmony default export */ __webpack_exports__["a"] = (AnimatedWithChildren);
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1439,7 +1830,7 @@ var AnimatedWithChildren = function (_AnimatedNode) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_normalizeNativeEvent__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_ResponderEventPlugin__ = __webpack_require__(185);
 /**
@@ -1561,14 +1952,14 @@ var createElement = function createElement(component, props) {
 /* harmony default export */ __webpack_exports__["a"] = (createElement);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_InteractionManager__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_InteractionManager__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NativeAnimatedHelper__ = __webpack_require__(12);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -1930,7 +2321,7 @@ var AnimatedValue = function (_AnimatedWithChildren) {
 /* harmony default export */ __webpack_exports__["a"] = (AnimatedValue);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
@@ -2085,7 +2476,7 @@ module.exports = Class({
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2109,7 +2500,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2175,7 +2566,7 @@ var unimplementedViewStyles = process.env.NODE_ENV !== 'production' ? {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2221,12 +2612,12 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NativeAnimatedHelper__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__);
@@ -2572,7 +2963,7 @@ AnimatedInterpolation.__createInterpolation = createInterpolation;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2607,7 +2998,7 @@ module.exports = factory(
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
@@ -2628,7 +3019,7 @@ module.exports = Class({
 });
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 var VMLCSS = 'behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px;';
@@ -2671,7 +3062,7 @@ exports.createElement = function(tag){
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2738,7 +3129,7 @@ var ViewStylePropTypes = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__modules_
 /* harmony default export */ __webpack_exports__["a"] = (ViewStylePropTypes);
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2756,7 +3147,7 @@ function isPrefixedValue(value) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2803,7 +3194,7 @@ function StyleSheetPropType(shape) {
 /* harmony default export */ __webpack_exports__["a"] = (StyleSheetPropType);
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2827,14 +3218,14 @@ var Platform = {
 /* harmony default export */ __webpack_exports__["a"] = (Platform);
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(26);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_dismissKeyboard__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_ScrollResponder__ = __webpack_require__(108);
@@ -3133,7 +3524,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_6__StyleSheet__["a" /* default */].create
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3149,7 +3540,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_6__StyleSheet__["a" /* default */].create
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(2);
   var warning = __webpack_require__(8);
-  var ReactPropTypesSecret = __webpack_require__(43);
+  var ReactPropTypesSecret = __webpack_require__(44);
   var loggedTypeFailures = {};
 }
 
@@ -3200,7 +3591,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3271,7 +3662,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3337,7 +3728,7 @@ var I18nManager = {
 /* harmony default export */ __webpack_exports__["a"] = (I18nManager);
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3408,7 +3799,7 @@ var InteractionManager = {
 /* harmony default export */ __webpack_exports__["a"] = (InteractionManager);
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3435,7 +3826,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3543,13 +3934,13 @@ if (__WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment__["canUseDOM"]) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_AccessibilityUtil__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BoundingDimensions__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_normalize_css_color__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_normalize_css_color___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_normalize_css_color__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Position__ = __webpack_require__(258);
@@ -3557,7 +3948,7 @@ if (__WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment__["canUseDOM"]) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_fbjs_lib_TouchEventUtils__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_fbjs_lib_TouchEventUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_fbjs_lib_TouchEventUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__UIManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__View__ = __webpack_require__(5);
 /* eslint-disable react/prop-types */
 
@@ -4355,7 +4746,7 @@ var Touchable = {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4451,10 +4842,10 @@ var TimerMixin = {
 
 module.exports = TimerMixin;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(38)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4462,6 +4853,8 @@ module.exports = TimerMixin;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_native__ = __webpack_require__(14);
+
 
 
 const defaultBubbleStyles = {
@@ -4493,12 +4886,28 @@ class ChatBubble extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         const { userBubble, chatBubble, text, recipientBubble } = bubbleStyles;
         const youAreAuthor = this.props.message.authorId === yourAuthorId;
         // message.id 0 is reserved for blue
-        const chatBubbleStyles = Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubble, (youAreAuthor ? {} : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientChatBubble), (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubbleOrientationNormal : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientChatBubbleOrientationNormal), (this.props.isFirstInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].firstChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientFirstChatBubbleInGroup)), (this.props.isLastInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].lastChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientLastChatBubbleInGroup)), (this.props.isCenterInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].centerChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientCenterChatBubbleInGroup)), chatBubble, (youAreAuthor ? userBubble : recipientBubble));
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubbleWrapper), className: "react-native-bell-chat__chat-bubble" },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { style: chatBubbleStyles },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].p, text) }, this.props.message.message),
-                this.props.message.createdOn && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: "react-native-bell-chat__chat-bubble__created-on", style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].createdOn, (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)), title: this.props.message.createdOn.toLocaleString() }, this.props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }))),
-                this.props.message.isSend !== undefined && youAreAuthor && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: "react-native-bell-chat__chat-bubble__is-send", style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].isSend), title: this.props.message.isSend ? 'Send' : 'Sending' }, this.props.message.isSend ?
+        const chatBubbleStyles = [
+            __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubble,
+            (youAreAuthor ? {} : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientChatBubble),
+            (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubbleOrientationNormal : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientChatBubbleOrientationNormal),
+            (this.props.isFirstInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].firstChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientFirstChatBubbleInGroup)),
+            (this.props.isLastInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].lastChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientLastChatBubbleInGroup)),
+            (this.props.isCenterInGroup && (youAreAuthor ? __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].centerChatBubbleInGroup : __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].recipientCenterChatBubbleInGroup)),
+            chatBubble,
+            (youAreAuthor ? userBubble : recipientBubble),
+        ];
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["g" /* View */], { style: [
+                __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].chatBubbleWrapper,
+            ] },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["g" /* View */], { style: [...chatBubbleStyles] },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [__WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].p, text] }, this.props.message.message),
+                this.props.message.createdOn && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [
+                        __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].createdOn,
+                        (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
+                    ] }, this.props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }))),
+                this.props.message.isSend !== undefined && youAreAuthor && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], { style: [
+                        __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].isSend,
+                    ] }, this.props.message.isSend ?
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("svg", { width: "10px", height: "10px", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 10 10", preserveAspectRatio: "xMidYMid", style: { background: 'none' } },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("path", Object.assign({ fill: bubbleStyles.isSendIconColor ? bubbleStyles.isSendIconColor : defaultBubbleStyles.isSendIconColor }, {}, { d: "M9,1.7L8.6,1.4C8.5,1.3,8.3,1.3,8.2,1.4L3.9,7C3.8,7.1,3.6,7.1,3.5,7c0,0,0,0,0,0L1.7,5.3c-0.1-0.1-0.3-0.1-0.4,0L1,5.6 C0.9,5.7,0.9,5.9,1,6l2.6,2.6c0.1,0.1,0.3,0.1,0.4,0L9,2.1C9.1,2,9.1,1.8,9,1.7z" })))
                     :
@@ -4507,7 +4916,7 @@ class ChatBubble extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("animateTransform", { attributeName: "transform", type: "rotate", calcMode: "linear", values: "0 50 52.5;360 50 52.5", keyTimes: "0;1", dur: "1s", begin: "0s", repeatCount: "indefinite" })))))),
             this.props.showRecipientLastSeenMessage && this.props.lastSeenByAuthors &&
                 this.props.lastSeenByAuthors.length > 0 && this.props.customLastSeenAvatar &&
-                (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__chat-bubble__last-seen-by__container", style: __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].lastSeenByContainer, onMouseEnter: () => this.setState({ mouseOverLastSeenContainer: true }), onMouseLeave: () => this.setState({ mouseOverLastSeenContainer: false }), title: 'Last seen by ' + this.props.lastSeenByAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and') }, this.props.lastSeenByAuthors.map((a, i) => (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](this.props.customLastSeenAvatar, { key: i, author: a, containerStyle: Object.assign({}, (i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }), { zIndex: 100 + i }) })))))));
+                (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["g" /* View */], { style: __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].lastSeenByContainer }, this.props.lastSeenByAuthors.map((a, i) => (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](this.props.customLastSeenAvatar, { key: i, author: a, containerStyle: Object.assign({}, (i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }), { zIndex: 100 + i }) })))))));
     }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = ChatBubble;
@@ -4515,7 +4924,7 @@ class ChatBubble extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4534,397 +4943,6 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export DatePickerIOS */
-/* unused harmony export DrawerLayoutAndroid */
-/* unused harmony export ImageEditor */
-/* unused harmony export ImageStore */
-/* unused harmony export InputAccessoryView */
-/* unused harmony export MaskedViewIOS */
-/* unused harmony export NavigatorIOS */
-/* unused harmony export PickerIOS */
-/* unused harmony export ProgressBarAndroid */
-/* unused harmony export ProgressViewIOS */
-/* unused harmony export SegmentedControlIOS */
-/* unused harmony export SnapshotViewIOS */
-/* unused harmony export TabBarIOS */
-/* unused harmony export ToastAndroid */
-/* unused harmony export ToolbarAndroid */
-/* unused harmony export ViewPagerAndroid */
-/* unused harmony export WebView */
-/* unused harmony export ActionSheetIOS */
-/* unused harmony export AlertIOS */
-/* unused harmony export CameraRoll */
-/* unused harmony export DatePickerAndroid */
-/* unused harmony export ImagePickerIOS */
-/* unused harmony export PermissionsAndroid */
-/* unused harmony export PushNotificationIOS */
-/* unused harmony export Settings */
-/* unused harmony export StatusBarIOS */
-/* unused harmony export Systrace */
-/* unused harmony export TimePickerAndroid */
-/* unused harmony export TVEventHandler */
-/* unused harmony export VibrationIOS */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_createElement__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_processColor__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_render__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_unmountComponentAtNode__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports_NativeModules__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__exports_TextPropTypes__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__exports_ViewPropTypes__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__exports_AccessibilityInfo__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__exports_Alert__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__exports_Animated__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__exports_AppState__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exports_AsyncStorage__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__exports_BackHandler__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__exports_Clipboard__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__exports_DeviceInfo__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__exports_Dimensions__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__exports_Easing__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__exports_I18nManager__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__exports_Keyboard__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__exports_InteractionManager__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__exports_LayoutAnimation__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__exports_Linking__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__exports_NativeEventEmitter__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__exports_NetInfo__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__exports_PanResponder__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__exports_PixelRatio__ = __webpack_require__(239);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__exports_Platform__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__exports_Share__ = __webpack_require__(240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__exports_StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__exports_UIManager__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__exports_Vibration__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__exports_ActivityIndicator__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__exports_ART__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__exports_Button__ = __webpack_require__(256);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__exports_CheckBox__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__exports_FlatList__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__exports_Image__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__exports_ImageBackground__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__exports_KeyboardAvoidingView__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__exports_ListView__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__exports_Modal__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__exports_Picker__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__exports_ProgressBar__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__exports_RefreshControl__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__exports_SafeAreaView__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__exports_SectionList__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__exports_Slider__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__exports_StatusBar__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__exports_SwipeableFlatList__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__exports_SwipeableListView__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__exports_Switch__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__exports_Text__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__exports_Touchable__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__exports_TouchableNativeFeedback__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__exports_TouchableOpacity__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__exports_TouchableWithoutFeedback__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__exports_View__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__exports_VirtualizedList__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__exports_YellowBox__ = __webpack_require__(295);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__exports_ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__exports_EdgeInsetsPropType__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__exports_PointPropType__ = __webpack_require__(296);
-/* unused harmony reexport createElement */
-/* unused harmony reexport findNodeHandle */
-/* unused harmony reexport render */
-/* unused harmony reexport unmountComponentAtNode */
-/* unused harmony reexport processColor */
-/* unused harmony reexport NativeModules */
-/* unused harmony reexport TextPropTypes */
-/* unused harmony reexport ViewPropTypes */
-/* unused harmony reexport AccessibilityInfo */
-/* unused harmony reexport Alert */
-/* unused harmony reexport Animated */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__["a"]; });
-/* unused harmony reexport AppState */
-/* unused harmony reexport AsyncStorage */
-/* unused harmony reexport BackHandler */
-/* unused harmony reexport Clipboard */
-/* unused harmony reexport DeviceInfo */
-/* unused harmony reexport Dimensions */
-/* unused harmony reexport Easing */
-/* unused harmony reexport I18nManager */
-/* unused harmony reexport InteractionManager */
-/* unused harmony reexport Keyboard */
-/* unused harmony reexport LayoutAnimation */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_24__exports_Linking__["a"]; });
-/* unused harmony reexport NativeEventEmitter */
-/* unused harmony reexport NetInfo */
-/* unused harmony reexport PanResponder */
-/* unused harmony reexport PixelRatio */
-/* unused harmony reexport Platform */
-/* unused harmony reexport Share */
-/* unused harmony reexport StyleSheet */
-/* unused harmony reexport UIManager */
-/* unused harmony reexport Vibration */
-/* unused harmony reexport ActivityIndicator */
-/* unused harmony reexport ART */
-/* unused harmony reexport Button */
-/* unused harmony reexport CheckBox */
-/* unused harmony reexport FlatList */
-/* unused harmony reexport Image */
-/* unused harmony reexport ImageBackground */
-/* unused harmony reexport KeyboardAvoidingView */
-/* unused harmony reexport ListView */
-/* unused harmony reexport Modal */
-/* unused harmony reexport Picker */
-/* unused harmony reexport ProgressBar */
-/* unused harmony reexport RefreshControl */
-/* unused harmony reexport SafeAreaView */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__["a"]; });
-/* unused harmony reexport SectionList */
-/* unused harmony reexport Slider */
-/* unused harmony reexport StatusBar */
-/* unused harmony reexport SwipeableFlatList */
-/* unused harmony reexport SwipeableListView */
-/* unused harmony reexport Switch */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_55__exports_Text__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__["a"]; });
-/* unused harmony reexport Touchable */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__["a"]; });
-/* unused harmony reexport TouchableNativeFeedback */
-/* unused harmony reexport TouchableOpacity */
-/* unused harmony reexport TouchableWithoutFeedback */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_62__exports_View__["a"]; });
-/* unused harmony reexport VirtualizedList */
-/* unused harmony reexport YellowBox */
-/* unused harmony reexport ColorPropType */
-/* unused harmony reexport EdgeInsetsPropType */
-/* unused harmony reexport PointPropType */
-
-
-
-
-
-
-
-
-
-
-
-// APIs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// components
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// propTypes
-
-
-
-
-var emptyObject = {};
-// compat (components)
-var DatePickerIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var DrawerLayoutAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ImageEditor = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ImageStore = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var InputAccessoryView = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var MaskedViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var NavigatorIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var PickerIOS = __WEBPACK_IMPORTED_MODULE_44__exports_Picker__["a" /* default */];
-var ProgressBarAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ProgressViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var SegmentedControlIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var SnapshotViewIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var TabBarIOS = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ToastAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ToolbarAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var ViewPagerAndroid = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-var WebView = __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */];
-// compat (apis)
-var ActionSheetIOS = emptyObject;
-var AlertIOS = emptyObject;
-var CameraRoll = emptyObject;
-var DatePickerAndroid = emptyObject;
-var ImagePickerIOS = emptyObject;
-var PermissionsAndroid = emptyObject;
-var PushNotificationIOS = emptyObject;
-var Settings = emptyObject;
-var StatusBarIOS = emptyObject;
-var Systrace = emptyObject;
-var TimePickerAndroid = emptyObject;
-var TVEventHandler = emptyObject;
-var VibrationIOS = emptyObject;
-
-
-
-var ReactNative = {
-  // top-level API
-  createElement: __WEBPACK_IMPORTED_MODULE_1__exports_createElement__["a" /* default */],
-  findNodeHandle: __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__["a" /* default */],
-  render: __WEBPACK_IMPORTED_MODULE_4__exports_render__["a" /* default */],
-  unmountComponentAtNode: __WEBPACK_IMPORTED_MODULE_5__exports_unmountComponentAtNode__["a" /* default */],
-  // modules
-  processColor: __WEBPACK_IMPORTED_MODULE_3__exports_processColor__["a" /* default */],
-  NativeModules: __WEBPACK_IMPORTED_MODULE_6__exports_NativeModules__["a" /* default */],
-  TextPropTypes: __WEBPACK_IMPORTED_MODULE_7__exports_TextPropTypes__["a" /* default */],
-  ViewPropTypes: __WEBPACK_IMPORTED_MODULE_8__exports_ViewPropTypes__["a" /* default */],
-  // APIs
-  AccessibilityInfo: __WEBPACK_IMPORTED_MODULE_9__exports_AccessibilityInfo__["a" /* default */],
-  Alert: __WEBPACK_IMPORTED_MODULE_10__exports_Alert__["a" /* default */],
-  Animated: __WEBPACK_IMPORTED_MODULE_11__exports_Animated__["a" /* default */],
-  AppRegistry: __WEBPACK_IMPORTED_MODULE_12__exports_AppRegistry__["a" /* default */],
-  AppState: __WEBPACK_IMPORTED_MODULE_13__exports_AppState__["a" /* default */],
-  AsyncStorage: __WEBPACK_IMPORTED_MODULE_14__exports_AsyncStorage__["a" /* default */],
-  BackHandler: __WEBPACK_IMPORTED_MODULE_15__exports_BackHandler__["a" /* default */],
-  Clipboard: __WEBPACK_IMPORTED_MODULE_16__exports_Clipboard__["a" /* default */],
-  DeviceInfo: __WEBPACK_IMPORTED_MODULE_17__exports_DeviceInfo__["a" /* default */],
-  Dimensions: __WEBPACK_IMPORTED_MODULE_18__exports_Dimensions__["a" /* default */],
-  Easing: __WEBPACK_IMPORTED_MODULE_19__exports_Easing__["a" /* default */],
-  I18nManager: __WEBPACK_IMPORTED_MODULE_20__exports_I18nManager__["a" /* default */],
-  InteractionManager: __WEBPACK_IMPORTED_MODULE_22__exports_InteractionManager__["a" /* default */],
-  Keyboard: __WEBPACK_IMPORTED_MODULE_21__exports_Keyboard__["a" /* default */],
-  LayoutAnimation: __WEBPACK_IMPORTED_MODULE_23__exports_LayoutAnimation__["a" /* default */],
-  Linking: __WEBPACK_IMPORTED_MODULE_24__exports_Linking__["a" /* default */],
-  NativeEventEmitter: __WEBPACK_IMPORTED_MODULE_25__exports_NativeEventEmitter__["a" /* default */],
-  NetInfo: __WEBPACK_IMPORTED_MODULE_26__exports_NetInfo__["a" /* default */],
-  PanResponder: __WEBPACK_IMPORTED_MODULE_27__exports_PanResponder__["a" /* default */],
-  PixelRatio: __WEBPACK_IMPORTED_MODULE_28__exports_PixelRatio__["a" /* default */],
-  Platform: __WEBPACK_IMPORTED_MODULE_29__exports_Platform__["a" /* default */],
-  Share: __WEBPACK_IMPORTED_MODULE_30__exports_Share__["a" /* default */],
-  StyleSheet: __WEBPACK_IMPORTED_MODULE_31__exports_StyleSheet__["a" /* default */],
-  UIManager: __WEBPACK_IMPORTED_MODULE_32__exports_UIManager__["a" /* default */],
-  Vibration: __WEBPACK_IMPORTED_MODULE_33__exports_Vibration__["a" /* default */],
-  // components
-  ActivityIndicator: __WEBPACK_IMPORTED_MODULE_34__exports_ActivityIndicator__["a" /* default */],
-  ART: __WEBPACK_IMPORTED_MODULE_35__exports_ART__["a" /* default */],
-  Button: __WEBPACK_IMPORTED_MODULE_36__exports_Button__["a" /* default */],
-  CheckBox: __WEBPACK_IMPORTED_MODULE_37__exports_CheckBox__["a" /* default */],
-  FlatList: __WEBPACK_IMPORTED_MODULE_38__exports_FlatList__["a" /* default */],
-  Image: __WEBPACK_IMPORTED_MODULE_39__exports_Image__["a" /* default */],
-  ImageBackground: __WEBPACK_IMPORTED_MODULE_40__exports_ImageBackground__["a" /* default */],
-  KeyboardAvoidingView: __WEBPACK_IMPORTED_MODULE_41__exports_KeyboardAvoidingView__["a" /* default */],
-  ListView: __WEBPACK_IMPORTED_MODULE_42__exports_ListView__["a" /* default */],
-  Modal: __WEBPACK_IMPORTED_MODULE_43__exports_Modal__["a" /* default */],
-  Picker: __WEBPACK_IMPORTED_MODULE_44__exports_Picker__["a" /* default */],
-  ProgressBar: __WEBPACK_IMPORTED_MODULE_45__exports_ProgressBar__["a" /* default */],
-  RefreshControl: __WEBPACK_IMPORTED_MODULE_46__exports_RefreshControl__["a" /* default */],
-  SafeAreaView: __WEBPACK_IMPORTED_MODULE_47__exports_SafeAreaView__["a" /* default */],
-  ScrollView: __WEBPACK_IMPORTED_MODULE_48__exports_ScrollView__["a" /* default */],
-  SectionList: __WEBPACK_IMPORTED_MODULE_49__exports_SectionList__["a" /* default */],
-  Slider: __WEBPACK_IMPORTED_MODULE_50__exports_Slider__["a" /* default */],
-  StatusBar: __WEBPACK_IMPORTED_MODULE_51__exports_StatusBar__["a" /* default */],
-  SwipeableFlatList: __WEBPACK_IMPORTED_MODULE_52__exports_SwipeableFlatList__["a" /* default */],
-  SwipeableListView: __WEBPACK_IMPORTED_MODULE_53__exports_SwipeableListView__["a" /* default */],
-  Switch: __WEBPACK_IMPORTED_MODULE_54__exports_Switch__["a" /* default */],
-  Text: __WEBPACK_IMPORTED_MODULE_55__exports_Text__["a" /* default */],
-  TextInput: __WEBPACK_IMPORTED_MODULE_56__exports_TextInput__["a" /* default */],
-  Touchable: __WEBPACK_IMPORTED_MODULE_57__exports_Touchable__["a" /* default */],
-  TouchableHighlight: __WEBPACK_IMPORTED_MODULE_58__exports_TouchableHighlight__["a" /* default */],
-  TouchableNativeFeedback: __WEBPACK_IMPORTED_MODULE_59__exports_TouchableNativeFeedback__["a" /* default */],
-  TouchableOpacity: __WEBPACK_IMPORTED_MODULE_60__exports_TouchableOpacity__["a" /* default */],
-  TouchableWithoutFeedback: __WEBPACK_IMPORTED_MODULE_61__exports_TouchableWithoutFeedback__["a" /* default */],
-  View: __WEBPACK_IMPORTED_MODULE_62__exports_View__["a" /* default */],
-  VirtualizedList: __WEBPACK_IMPORTED_MODULE_63__exports_VirtualizedList__["a" /* default */],
-  YellowBox: __WEBPACK_IMPORTED_MODULE_64__exports_YellowBox__["a" /* default */],
-  // propTypes
-  ColorPropType: __WEBPACK_IMPORTED_MODULE_65__exports_ColorPropType__["a" /* default */],
-  EdgeInsetsPropType: __WEBPACK_IMPORTED_MODULE_66__exports_EdgeInsetsPropType__["a" /* default */],
-  PointPropType: __WEBPACK_IMPORTED_MODULE_67__exports_PointPropType__["a" /* default */],
-  // compat (components)
-  DatePickerIOS: DatePickerIOS,
-  DrawerLayoutAndroid: DrawerLayoutAndroid,
-  ImageEditor: ImageEditor,
-  ImageStore: ImageStore,
-  InputAccessoryView: InputAccessoryView,
-  MaskedViewIOS: MaskedViewIOS,
-  NavigatorIOS: NavigatorIOS,
-  PickerIOS: PickerIOS,
-  ProgressBarAndroid: ProgressBarAndroid,
-  ProgressViewIOS: ProgressViewIOS,
-  SegmentedControlIOS: SegmentedControlIOS,
-  SnapshotViewIOS: SnapshotViewIOS,
-  TabBarIOS: TabBarIOS,
-  ToastAndroid: ToastAndroid,
-  ToolbarAndroid: ToolbarAndroid,
-  ViewPagerAndroid: ViewPagerAndroid,
-  WebView: WebView,
-  // compat (apis)
-  ActionSheetIOS: ActionSheetIOS,
-  AlertIOS: AlertIOS,
-  CameraRoll: CameraRoll,
-  DatePickerAndroid: DatePickerAndroid,
-  ImagePickerIOS: ImagePickerIOS,
-  PermissionsAndroid: PermissionsAndroid,
-  PushNotificationIOS: PushNotificationIOS,
-  Settings: Settings,
-  StatusBarIOS: StatusBarIOS,
-  Systrace: Systrace,
-  TimePickerAndroid: TimePickerAndroid,
-  TVEventHandler: TVEventHandler,
-  VibrationIOS: VibrationIOS
-};
-
-/* unused harmony default export */ var _unused_webpack_default_export = (ReactNative);
-
-/***/ }),
 /* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4933,7 +4951,7 @@ var ReactNative = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_debounce__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_debounce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_debounce__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(15);
 /**
  * Copyright (c) 2015-present, Nicolas Gallagher.
  *
@@ -5590,7 +5608,7 @@ module.exports = normalizeColor;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__View_ViewStylePropTypes__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__View_ViewStylePropTypes__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /**
@@ -5808,7 +5826,7 @@ function createStrictShapeTypeChecker(shapeTypes) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__UIManager__ = __webpack_require__(18);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
  *
@@ -5832,7 +5850,7 @@ var NativeModules = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_StyleSheetPropType__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_StyleSheetPropType__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TextStylePropTypes__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
@@ -5879,9 +5897,9 @@ var TextPropTypes = {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnimatedEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return attachNativeEvent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NativeAnimatedHelper__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_fbjs_lib_invariant__);
 /**
@@ -6058,8 +6076,8 @@ var AnimatedEvent = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedValue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedValue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__);
 /**
@@ -6353,8 +6371,8 @@ var Animation = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createElement__ = __webpack_require__(19);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_AssetRegistry__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__StyleSheet_resolveShadowValue__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_ImageLoader__ = __webpack_require__(214);
@@ -6363,7 +6381,7 @@ var Animation = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ImageStylePropTypes__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ImageUriCache__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__modules_StyleSheetPropType__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__modules_StyleSheetPropType__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ViewPropTypes__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_prop_types__ = __webpack_require__(3);
@@ -6841,7 +6859,7 @@ var resizeModeStyles = __WEBPACK_IMPORTED_MODULE_9__StyleSheet__["a" /* default 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_UIManager__ = __webpack_require__(18);
 /**
  * Copyright (c) 2015-present, Nicolas Gallagher.
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -6915,12 +6933,12 @@ var TextInputState = {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyLayout__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StyleSheet__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__TextPropTypes__ = __webpack_require__(57);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -7164,7 +7182,7 @@ module.exports = Class({
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Transform = __webpack_require__(21);
+var Transform = __webpack_require__(22);
 var Element = __webpack_require__(117);
 
 var CanvasNode = Class(Transform, Element, {
@@ -7358,9 +7376,9 @@ module.exports = VMLPath;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Transform = __webpack_require__(21);
+var Transform = __webpack_require__(22);
 var Element = __webpack_require__(252);
-var DOM = __webpack_require__(28);
+var DOM = __webpack_require__(29);
 
 module.exports = Class(Element, Transform, {
 
@@ -7428,16 +7446,16 @@ var ensurePositiveDelayProps = function ensurePositiveDelayProps(props) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(26);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EdgeInsetsPropType__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Touchable_ensurePositiveDelayProps__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_timer_mixin__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_timer_mixin__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_timer_mixin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_timer_mixin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Touchable__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Touchable__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ViewPropTypes__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_fbjs_lib_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_fbjs_lib_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_fbjs_lib_warning__);
@@ -7650,13 +7668,13 @@ var styles = __WEBPACK_IMPORTED_MODULE_4__StyleSheet__["a" /* default */].create
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_RefreshControl__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_ScrollView__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_ScrollView__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports_StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__exports_UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__exports_UIManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__exports_View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ViewabilityHelper__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__VirtualizeUtils__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__infoLog__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_fbjs_lib_invariant__);
@@ -9035,7 +9053,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_6__exports_StyleSheet__["a" /* default */
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
 
 
 const styles = {
@@ -9080,7 +9098,9 @@ const Avatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_react__["cr
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChatBubble__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChatBubble__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_native__ = __webpack_require__(14);
+
 
 
 const styles = {
@@ -9094,12 +9114,17 @@ const SystemChatBubble = (props) => {
     let { bubbleStyles } = props;
     bubbleStyles = bubbleStyles || __WEBPACK_IMPORTED_MODULE_1__ChatBubble__["b" /* defaultBubbleStyles */];
     const time = props.message.createdOn && props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-    return props.message && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__chat-bubble react-native-bell-chat__chat-bubble--system", style: Object.assign({}, styles.container, bubbleStyles.systemChatBubbleContainerStyle) },
-        time && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: "react-native-bell-chat__chat-bubble--system__created-on", title: props.message.createdOn.toLocaleString() },
+    return props.message && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["g" /* View */], { style: [
+            styles.container,
+            bubbleStyles.systemChatBubbleContainerStyle
+        ] },
+        time && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */]
+        /*title={props.message.createdOn.toLocaleString()}*/
+        , null,
             time,
             ":",
             ' ')),
-        props.message.message));
+        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2_react_native__["d" /* Text */], null, props.message.message)));
 };
 /* harmony default export */ __webpack_exports__["a"] = (SystemChatBubble);
 
@@ -10434,7 +10459,7 @@ var resolveShadowValue = function resolveShadowValue(style) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__I18nManager__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__I18nManager__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_multiplyStyleLengthValue__ = __webpack_require__(94);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
@@ -10964,8 +10989,8 @@ function normalizeNativeEvent(nativeEvent) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EdgeInsetsPropType__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_StyleSheetPropType__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ViewStylePropTypes__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_StyleSheetPropType__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ViewStylePropTypes__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /**
@@ -11041,7 +11066,7 @@ var ViewPropTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
@@ -11060,7 +11085,7 @@ var ViewPropTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
@@ -11081,7 +11106,7 @@ var ViewPropTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_react_native_Animated_AnimatedImplementation__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Image__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ScrollView__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ScrollView__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Text__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__View__ = __webpack_require__(5);
 /**
@@ -11114,7 +11139,7 @@ var Animated = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__vendor_react_nativ
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__emitter_EventEmitter__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__);
 /**
@@ -11195,7 +11220,7 @@ var NativeEventEmitter = function (_EventEmitter) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedStyle__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NativeAnimatedHelper__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_fbjs_lib_invariant__);
 /**
@@ -11692,13 +11717,13 @@ var dismissKeyboard = function dismissKeyboard() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_Dimensions__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_Dimensions__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_fbjs_lib_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_Platform__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_Platform__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__TextInputState__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_UIManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_fbjs_lib_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_fbjs_lib_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_fbjs_lib_warning__);
 /**
@@ -12302,7 +12327,7 @@ if (hasCanvas()) {
   exports.ClippingRectangle = __webpack_require__(253);
   exports.Text = __webpack_require__(254);
 
-  var DOM = __webpack_require__(28);
+  var DOM = __webpack_require__(29);
   if (typeof document !== 'undefined') DOM.init(document);
 }
 
@@ -12666,7 +12691,7 @@ module.exports = Class({
 
 var Class = __webpack_require__(6);
 var Color = __webpack_require__(116);
-var Transform = __webpack_require__(21);
+var Transform = __webpack_require__(22);
 var Node = __webpack_require__(65);
 
 var genericCanvas = typeof document !== 'undefined' && document.createElement('canvas'),
@@ -13205,9 +13230,9 @@ module.exports = Class({
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Container = __webpack_require__(27);
+var Container = __webpack_require__(28);
 var Element = __webpack_require__(64);
-var DOM = __webpack_require__(28);
+var DOM = __webpack_require__(29);
 
 var precision = 100;
 
@@ -13251,10 +13276,10 @@ module.exports = VMLSurface;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Transform = __webpack_require__(21);
+var Transform = __webpack_require__(22);
 var Color = __webpack_require__(116);
 var Node = __webpack_require__(67);
-var DOM = __webpack_require__(28);
+var DOM = __webpack_require__(29);
 
 var precision = 100;
 
@@ -13572,8 +13597,8 @@ module.exports = Class(Node, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Transform = __webpack_require__(21);
-var Container = __webpack_require__(27);
+var Transform = __webpack_require__(22);
+var Container = __webpack_require__(28);
 var Node = __webpack_require__(67);
 
 module.exports = Class(Node, Container, {
@@ -13612,8 +13637,8 @@ module.exports = Class(Node, Container, {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Touchable_ensurePositiveDelayProps__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
@@ -13621,7 +13646,7 @@ module.exports = Class(Node, Container, {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Touchable__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Touchable__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__TouchableWithoutFeedback__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__View__ = __webpack_require__(5);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -13907,7 +13932,7 @@ var PooledClass = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_View__ = __webpack_require__(5);
@@ -14474,21 +14499,21 @@ var ensureComponentIsNative = function ensureComponentIsNative(component) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ListViewDataSource__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_NativeModules__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports_ScrollView__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__exports_ScrollView__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_ScrollResponder__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__StaticRenderer__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_timer_mixin__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_timer_mixin__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react_timer_mixin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react_timer_mixin__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__exports_View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__cloneReferencedElement__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_create_react_class__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__isEmpty__ = __webpack_require__(128);
 /**
@@ -15608,14 +15633,14 @@ function isEmpty(obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PickerItem__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PickerItemPropType__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PickerStylePropTypes__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_StyleSheetPropType__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_StyleSheetPropType__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__StyleSheet__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Text_TextPropTypes__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_prop_types__ = __webpack_require__(3);
@@ -15726,17 +15751,17 @@ var styles = __WEBPACK_IMPORTED_MODULE_7__StyleSheet__["a" /* default */].create
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_Animated__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_I18nManager__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_I18nManager__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_PanResponder__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exports_StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_timer_mixin__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_timer_mixin__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_timer_mixin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_timer_mixin__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__exports_View__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_create_react_class__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_fbjs_lib_emptyFunction__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_fbjs_lib_emptyFunction___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_fbjs_lib_emptyFunction__);
@@ -16086,6 +16111,8 @@ var styles = __WEBPACK_IMPORTED_MODULE_5__exports_StyleSheet__["a" /* default */
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
+
 
 const styles = {
     container: {
@@ -16098,7 +16125,7 @@ const styles = {
     }
 };
 const IsTyping = (props) => {
-    return props.typingAuthors && props.typingAuthors.length > 0 && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__is-typing__container", style: styles.container }, props.typingAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and') + (props.typingAuthors.length === 1 ? ' is ' : ' are ') + 'typing'));
+    return props.typingAuthors && props.typingAuthors.length > 0 && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: styles.container }, props.typingAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and') + (props.typingAuthors.length === 1 ? ' is ' : ' are ') + 'typing'));
 };
 /* harmony default export */ __webpack_exports__["a"] = (IsTyping);
 
@@ -16110,7 +16137,7 @@ const IsTyping = (props) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
 
 
 const styles = {
@@ -16173,25 +16200,30 @@ class ChatScrollArea extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
+
 
 const styles = {
     container: {
         width: 20,
         height: 20,
-        lineHeight: '20px',
-        fontWeight: 400,
-        fontSize: 10,
         color: 'white',
         backgroundColor: 'rgb(153, 153, 153)',
         borderRadius: 10,
         textAlign: 'center',
         transition: '0.3s all ease-in-out',
-        display: 'block',
-        position: 'relative'
+    },
+    text: {
+        fontSize: 10,
+        lineHeight: 20,
+        fontWeight: '400',
     }
 };
-const LastSeenAvatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { style: Object.assign({}, styles.container, props.containerStyle), className: "react-native-bell-chat__last-seen-avatar" },
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { style: { pointerEvents: 'none' } }, props.author.lastSeenAvatarName ?
+const LastSeenAvatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["g" /* View */], { style: [
+        styles.container,
+        props.containerStyle
+    ] },
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: [] }, props.author.lastSeenAvatarName ?
         props.author.lastSeenAvatarName
         :
             props.author.name[0].toUpperCase())));
@@ -16205,7 +16237,7 @@ const LastSeenAvatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_rea
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChatBubble__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ChatBubble__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SystemChatBubble__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Avatar__ = __webpack_require__(71);
@@ -16270,6 +16302,8 @@ BubbleGroup.defaultProps = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
+
 
 const styles = {
     container: {
@@ -16279,7 +16313,10 @@ const styles = {
     },
 };
 const DateRow = (props) => {
-    return props.date && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__date-row", style: Object.assign({}, styles.container, props.containerStyles), title: props.date.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }, props.date.toLocaleDateString()));
+    return props.date && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: [
+            styles.container,
+            props.containerStyles
+        ] }, props.date.toLocaleDateString()));
 };
 /* harmony default export */ __webpack_exports__["a"] = (DateRow);
 
@@ -16291,6 +16328,8 @@ const DateRow = (props) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
+
 
 const styles = {
     containerStyles: {
@@ -16300,7 +16339,7 @@ const styles = {
 };
 const LoadingMessages = (props) => {
     const { containerStyles } = props;
-    return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__loading-messages", style: Object.assign({}, styles.containerStyles, containerStyles) },
+    return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["g" /* View */], { style: [styles.containerStyles, containerStyles] },
         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("svg", { width: "40px", height: "40px", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", preserveAspectRatio: "xMidYMid", style: {
                 background: 'none',
                 margin: 'auto',
@@ -16325,7 +16364,7 @@ LoadingMessages.defaultProps = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib__ = __webpack_require__(297);
 
 
@@ -16478,7 +16517,8 @@ class Chat extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 maxWidth: 850,
                 margin: 0,
                 marginLeft: 'auto',
-                marginRight: 'auto'
+                marginRight: 'auto',
+                height: '100%'
             } },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: { textAlign: 'center', fontSize: 48 } }, "react-native-bell-chat"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: { textAlign: 'center' } },
@@ -16493,7 +16533,17 @@ class Chat extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     paddingLeft: 20,
                     paddingRight: 20
                 } }, "npm i -S react-native-bell-chat"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "chatfeed-wrapper" },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["g" /* View */], { style: {
+                    shadowColor: 'rgba(0, 0, 0, .08)',
+                    shadowOffset: { width: 20, height: 20 },
+                    shadowRadius: 20,
+                    margin: 0,
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    borderWidth: 1,
+                    borderColor: '#ddd',
+                    paddingBottom: 20,
+                } },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__lib__["a" /* ChatFeed */], { yourAuthorId: 0, authors: this.state.authors, customChatBubble: this.state.useCustomBubble && customBubble, maxHeight: 350, messages: this.state.messages, showRecipientAvatar: this.state.showAvatar, ref: e => this.chat = e, showIsTyping: this.state.showIsTyping, showRecipientLastSeenMessage: this.state.showLastSeen, showDateRow: this.state.showDateRow, showLoadingMessages: this.state.showLoadingMessages, 
                     // tslint:disable-next-line:no-console
                     onLoadOldMessages: () => new Promise(resolve => setTimeout(() => {
@@ -16634,7 +16684,7 @@ __WEBPACK_IMPORTED_MODULE_1_react_native__["a" /* AppRegistry */].runApplication
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(16),n=__webpack_require__(2),p=__webpack_require__(22),q=__webpack_require__(13),r="function"===typeof Symbol&&Symbol["for"],t=r?Symbol["for"]("react.element"):60103,u=r?Symbol["for"]("react.portal"):60106,v=r?Symbol["for"]("react.fragment"):60107,w=r?Symbol["for"]("react.strict_mode"):60108,x=r?Symbol["for"]("react.provider"):60109,y=r?Symbol["for"]("react.context"):60110,z=r?Symbol["for"]("react.async_mode"):60111,A=r?Symbol["for"]("react.forward_ref"):
+var m=__webpack_require__(17),n=__webpack_require__(2),p=__webpack_require__(23),q=__webpack_require__(13),r="function"===typeof Symbol&&Symbol["for"],t=r?Symbol["for"]("react.element"):60103,u=r?Symbol["for"]("react.portal"):60106,v=r?Symbol["for"]("react.fragment"):60107,w=r?Symbol["for"]("react.strict_mode"):60108,x=r?Symbol["for"]("react.provider"):60109,y=r?Symbol["for"]("react.context"):60110,z=r?Symbol["for"]("react.async_mode"):60111,A=r?Symbol["for"]("react.forward_ref"):
 60112,B="function"===typeof Symbol&&Symbol.iterator;function C(a){for(var b=arguments.length-1,e="http://reactjs.org/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);n(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",e)}var D={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};
 function E(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||D}E.prototype.isReactComponent={};E.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?C("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};E.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function F(){}F.prototype=E.prototype;function G(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||D}var H=G.prototype=new F;
 H.constructor=G;m(H,E.prototype);H.isPureReactComponent=!0;var I={current:null},J=Object.prototype.hasOwnProperty,K={key:!0,ref:!0,__self:!0,__source:!0};
@@ -16671,12 +16721,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(16);
+var _assign = __webpack_require__(17);
 var invariant = __webpack_require__(2);
-var emptyObject = __webpack_require__(22);
+var emptyObject = __webpack_require__(23);
 var warning = __webpack_require__(8);
 var emptyFunction = __webpack_require__(13);
-var checkPropTypes = __webpack_require__(34);
+var checkPropTypes = __webpack_require__(35);
 
 // TODO: this is special because it gets imported during build.
 
@@ -18088,7 +18138,7 @@ module.exports = react;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var ba=__webpack_require__(2),ea=__webpack_require__(1),m=__webpack_require__(7),A=__webpack_require__(16),C=__webpack_require__(13),fa=__webpack_require__(73),ha=__webpack_require__(35),ja=__webpack_require__(74),ka=__webpack_require__(22);
+var ba=__webpack_require__(2),ea=__webpack_require__(1),m=__webpack_require__(7),A=__webpack_require__(17),C=__webpack_require__(13),fa=__webpack_require__(73),ha=__webpack_require__(36),ja=__webpack_require__(74),ka=__webpack_require__(23);
 function D(a){for(var b=arguments.length-1,c="http://reactjs.org/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);ba(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}ea?void 0:D("227");
 function ma(a,b,c,d,e,f,h,g,k){this._hasCaughtError=!1;this._caughtError=null;var v=Array.prototype.slice.call(arguments,3);try{b.apply(c,v)}catch(l){this._caughtError=l,this._hasCaughtError=!0}}
 var E={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,h,g,k){ma.apply(E,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,h,g,k){E.invokeGuardedCallback.apply(this,arguments);if(E.hasCaughtError()){var v=E.clearCaughtError();E._hasRethrowError||(E._hasRethrowError=!0,E._rethrowError=v)}},rethrowCaughtError:function(){return na.apply(E,arguments)},hasCaughtError:function(){return E._hasCaughtError},clearCaughtError:function(){if(E._hasCaughtError){var a=
@@ -18406,13 +18456,13 @@ var invariant = __webpack_require__(2);
 var React = __webpack_require__(1);
 var warning = __webpack_require__(8);
 var ExecutionEnvironment = __webpack_require__(7);
-var _assign = __webpack_require__(16);
+var _assign = __webpack_require__(17);
 var emptyFunction = __webpack_require__(13);
-var checkPropTypes = __webpack_require__(34);
+var checkPropTypes = __webpack_require__(35);
 var getActiveElement = __webpack_require__(73);
-var shallowEqual = __webpack_require__(35);
+var shallowEqual = __webpack_require__(36);
 var containsNode = __webpack_require__(74);
-var emptyObject = __webpack_require__(22);
+var emptyObject = __webpack_require__(23);
 var hyphenateStyleName = __webpack_require__(144);
 var camelizeStyleName = __webpack_require__(75);
 
@@ -35161,9 +35211,9 @@ module.exports = camelize;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createDOMProps__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exports_StyleSheet_styleResolver__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_UIManager__ = __webpack_require__(18);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -35391,7 +35441,7 @@ var StyleSheet = {
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Image_ImageStylePropTypes__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TextInput_TextInputStylePropTypes__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Text_TextStylePropTypes__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__View_ViewStylePropTypes__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__View_ViewStylePropTypes__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_fbjs_lib_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_fbjs_lib_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_fbjs_lib_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types__ = __webpack_require__(3);
@@ -35512,10 +35562,10 @@ StyleSheetValidation.addValidStylePropTypes({
 var emptyFunction = __webpack_require__(13);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(8);
-var assign = __webpack_require__(16);
+var assign = __webpack_require__(17);
 
-var ReactPropTypesSecret = __webpack_require__(43);
-var checkPropTypes = __webpack_require__(34);
+var ReactPropTypesSecret = __webpack_require__(44);
+var checkPropTypes = __webpack_require__(35);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -36061,7 +36111,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var emptyFunction = __webpack_require__(13);
 var invariant = __webpack_require__(2);
-var ReactPropTypesSecret = __webpack_require__(43);
+var ReactPropTypesSecret = __webpack_require__(44);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -36131,7 +36181,7 @@ var isWebColor = function isWebColor(color) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createReactDOMStyle__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_flattenArray__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__flattenStyle__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__I18nManager__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__I18nManager__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__i18nStyle__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_prefixStyles__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__StyleSheetManager__ = __webpack_require__(175);
@@ -36810,7 +36860,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = crossFade;
 
-var _isPrefixedValue = __webpack_require__(30);
+var _isPrefixedValue = __webpack_require__(31);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -36868,7 +36918,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = filter;
 
-var _isPrefixedValue = __webpack_require__(30);
+var _isPrefixedValue = __webpack_require__(31);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -37003,7 +37053,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = gradient;
 
-var _isPrefixedValue = __webpack_require__(30);
+var _isPrefixedValue = __webpack_require__(31);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -37036,7 +37086,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = imageSet;
 
-var _isPrefixedValue = __webpack_require__(30);
+var _isPrefixedValue = __webpack_require__(31);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -37126,7 +37176,7 @@ var _hyphenateProperty = __webpack_require__(174);
 
 var _hyphenateProperty2 = _interopRequireDefault(_hyphenateProperty);
 
-var _isPrefixedValue = __webpack_require__(30);
+var _isPrefixedValue = __webpack_require__(31);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -38130,7 +38180,7 @@ if (process.env.NODE_ENV === 'production') {
  * LICENSE file in the root directory of this source tree.
  */
 
-var k=__webpack_require__(24),l=__webpack_require__(2),m=__webpack_require__(16),n=__webpack_require__(13);function p(a){for(var b=arguments.length-1,c="http://reactjs.org/docs/error-decoder.html?invariant\x3d"+a,f=0;f<b;f++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[f+1]);l(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}
+var k=__webpack_require__(25),l=__webpack_require__(2),m=__webpack_require__(17),n=__webpack_require__(13);function p(a){for(var b=arguments.length-1,c="http://reactjs.org/docs/error-decoder.html?invariant\x3d"+a,f=0;f<b;f++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[f+1]);l(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}
 var q=null,r=null,t=null,u={injectComponentTree:function(a){q=a.getFiberCurrentPropsFromNode;r=a.getInstanceFromNode;t=a.getNodeFromInstance}};function v(a){return"topMouseUp"===a||"topTouchEnd"===a||"topTouchCancel"===a}function w(a){return"topMouseMove"===a||"topTouchMove"===a}function x(a){return"topMouseDown"===a||"topTouchStart"===a}
 function y(a){var b=a._dispatchListeners,c=a._dispatchInstances;Array.isArray(b)?p("103"):void 0;a.currentTarget=b?t(c):null;b=b?b(a):null;a.currentTarget=null;a._dispatchListeners=null;a._dispatchInstances=null;return b}function z(a){do a=a["return"];while(a&&5!==a.tag);return a?a:null}function A(a,b,c){for(var f=[];a;)f.push(a),a=z(a);for(a=f.length;0<a--;)b(f[a],"captured",c);for(a=0;a<f.length;a++)b(f[a],"bubbled",c)}
 function B(a,b){null==b?p("30"):void 0;if(null==a)return b;if(Array.isArray(a)){if(Array.isArray(b))return a.push.apply(a,b),a;a.push(b);return a}return Array.isArray(b)?[a].concat(b):[a,b]}function D(a,b,c){Array.isArray(a)?a.forEach(b,c):a&&b.call(c,a)}
@@ -38181,10 +38231,10 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var ReactDOM = __webpack_require__(24);
+var ReactDOM = __webpack_require__(25);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(8);
-var _assign = __webpack_require__(16);
+var _assign = __webpack_require__(17);
 var emptyFunction = __webpack_require__(13);
 
 // Relying on the `invariant()` implementation lets us
@@ -39901,13 +39951,13 @@ var Alert = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nodes_AnimatedAddition__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nodes_AnimatedDiffClamp__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nodes_AnimatedDivision__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nodes_AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nodes_AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nodes_AnimatedModulo__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nodes_AnimatedMultiplication__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__nodes_AnimatedNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nodes_AnimatedProps__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__nodes_AnimatedTracking__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nodes_AnimatedValue__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nodes_AnimatedValue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__nodes_AnimatedValueXY__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__animations_DecayAnimation__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__animations_SpringAnimation__ = __webpack_require__(208);
@@ -41030,10 +41080,10 @@ var cancelIdleCallback = isSupported ? window.cancelIdleCallback : _cancelIdleCa
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(19);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -41111,9 +41161,9 @@ var AnimatedAddition = function (_AnimatedWithChildren) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(19);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -41195,10 +41245,10 @@ var AnimatedDiffClamp = function (_AnimatedWithChildren) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(19);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -41281,9 +41331,9 @@ var AnimatedDivision = function (_AnimatedWithChildren) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(19);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -41358,10 +41408,10 @@ var AnimatedModulo = function (_AnimatedWithChildren) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedInterpolation__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedValue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AnimatedWithChildren__ = __webpack_require__(19);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -41441,7 +41491,7 @@ var AnimatedMultiplication = function (_AnimatedWithChildren) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedTransform__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AnimatedWithChildren__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NativeAnimatedHelper__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exports_StyleSheet__ = __webpack_require__(4);
 /**
@@ -41591,7 +41641,7 @@ var AnimatedStyle = function (_AnimatedWithChildren) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedNode__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedWithChildren__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NativeAnimatedHelper__ = __webpack_require__(12);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -41735,7 +41785,7 @@ var AnimatedTransform = function (_AnimatedWithChildren) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedValue__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AnimatedValue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AnimatedNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NativeAnimatedHelper__ = __webpack_require__(12);
 /**
@@ -41927,14 +41977,14 @@ var DecayAnimation = function (_Animation) {
 }(__WEBPACK_IMPORTED_MODULE_0__Animation__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (DecayAnimation);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(38)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(39)))
 
 /***/ }),
 /* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(20);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nodes_AnimatedValueXY__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Animation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SpringConfig__ = __webpack_require__(209);
@@ -42195,7 +42245,7 @@ var SpringAnimation = function (_Animation) {
 }(__WEBPACK_IMPORTED_MODULE_2__Animation__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (SpringAnimation);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(38)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(39)))
 
 /***/ }),
 /* 209 */
@@ -42289,7 +42339,7 @@ function fromBouncinessAndSpeed(bounciness, speed) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(20);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nodes_AnimatedValue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nodes_AnimatedValueXY__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Animation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Easing__ = __webpack_require__(106);
@@ -42420,7 +42470,7 @@ var TimingAnimation = function (_Animation) {
 }(__WEBPACK_IMPORTED_MODULE_2__Animation__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (TimingAnimation);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(38)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(39)))
 
 /***/ }),
 /* 211 */
@@ -42558,7 +42608,7 @@ module.exports = function bezier(mX1, mY1, mX2, mY2) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nodes_AnimatedProps__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_View_ViewStylePropTypes__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_View_ViewStylePropTypes__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_fbjs_lib_invariant__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_fbjs_lib_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_fbjs_lib_invariant__);
 /**
@@ -43053,9 +43103,9 @@ ImageUriCache._entries = {};
 
 
 
-var _assign = __webpack_require__(16);
+var _assign = __webpack_require__(17);
 
-var emptyObject = __webpack_require__(22);
+var emptyObject = __webpack_require__(23);
 var _invariant = __webpack_require__(2);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -44494,7 +44544,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_0__StyleSheet__["a" /* default */].create
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 /**
  * Copyright (c) 2016-present, Nicolas Gallagher.
@@ -45005,7 +45055,7 @@ var Clipboard = function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_fbjs_lib_ExecutionEnvironment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Dimensions__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Dimensions__ = __webpack_require__(40);
 /**
  * Copyright (c) 2015-present, Nicolas Gallagher.
  *
@@ -45145,7 +45195,7 @@ var Keyboard = {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_UIManager__ = __webpack_require__(18);
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -45542,7 +45592,7 @@ var NetInfo = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_InteractionManager__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_InteractionManager__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TouchHistoryMath__ = __webpack_require__(238);
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -46035,7 +46085,7 @@ var TouchHistoryMath = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Dimensions__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Dimensions__ = __webpack_require__(40);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
@@ -46217,7 +46267,7 @@ var Vibration = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__StyleSheet__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ViewPropTypes__ = __webpack_require__(10);
@@ -46396,7 +46446,7 @@ if (process.env.NODE_ENV === 'production') {
  * LICENSE file in the root directory of this source tree.
  */
 
-var aa=__webpack_require__(16),ba=__webpack_require__(1),ca=__webpack_require__(2),m=__webpack_require__(22),da=__webpack_require__(7),ea=__webpack_require__(21),n=__webpack_require__(111),fa=__webpack_require__(35),ha=__webpack_require__(112);
+var aa=__webpack_require__(17),ba=__webpack_require__(1),ca=__webpack_require__(2),m=__webpack_require__(23),da=__webpack_require__(7),ea=__webpack_require__(22),n=__webpack_require__(111),fa=__webpack_require__(36),ha=__webpack_require__(112);
 function x(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);ca(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}
 var ia=ba.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,y="function"===typeof Symbol&&Symbol.for,ja=y?Symbol.for("react.element"):60103,ka=y?Symbol.for("react.portal"):60106,z=y?Symbol.for("react.fragment"):60107,ma=y?Symbol.for("react.strict_mode"):60108,na=y?Symbol.for("react.profiler"):60114,oa=y?Symbol.for("react.provider"):60109,pa=y?Symbol.for("react.context"):60110,qa=y?Symbol.for("react.async_mode"):60111,ra=y?Symbol.for("react.forward_ref"):60112,sa=y?Symbol.for("react.timeout"):
 60113,ta="function"===typeof Symbol&&Symbol.iterator;function ua(a){if(null===a||"undefined"===typeof a)return null;a=ta&&a[ta]||a["@@iterator"];return"function"===typeof a?a:null}
@@ -46514,7 +46564,7 @@ b}}),Oa(this.props.children))};return b}(ba.Component);module.exports={ClippingR
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Container = __webpack_require__(27);
+var Container = __webpack_require__(28);
 var Element = __webpack_require__(64);
 
 var fps = 1000 / 60, invalids = [], renderTimer, renderInvalids = function(){
@@ -46761,7 +46811,7 @@ module.exports = Class(Base, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Container = __webpack_require__(27);
+var Container = __webpack_require__(28);
 var Node = __webpack_require__(65);
 
 module.exports = Class(Node, Container, {
@@ -46809,7 +46859,7 @@ module.exports = Class(Node, Container, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Container = __webpack_require__(27);
+var Container = __webpack_require__(28);
 var Node = __webpack_require__(65);
 
 module.exports = Class(Node, Container, {
@@ -46976,7 +47026,7 @@ module.exports = Class(Base, {
 var Class = __webpack_require__(6);
 var Base = __webpack_require__(119);
 var Path = __webpack_require__(66);
-var DOM = __webpack_require__(28);
+var DOM = __webpack_require__(29);
 
 var precision = 100;
 
@@ -47119,8 +47169,8 @@ module.exports = Class(Dummy, Native, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var Class = __webpack_require__(6);
-var Transform = __webpack_require__(21);
-var Container = __webpack_require__(27);
+var Transform = __webpack_require__(22);
+var Container = __webpack_require__(28);
 var Node = __webpack_require__(67);
 
 module.exports = Class(Node, Container, {
@@ -47170,7 +47220,7 @@ var Base = __webpack_require__(119);
 var Path = __webpack_require__(66);
 var Surface = __webpack_require__(118);
 var Group = __webpack_require__(120);
-var DOM = __webpack_require__(28);
+var DOM = __webpack_require__(29);
 
 var fontAnchors = { start: 'left', middle: 'center', end: 'right' };
 
@@ -47297,16 +47347,16 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(16);
+var _assign = __webpack_require__(17);
 var React = __webpack_require__(1);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(8);
-var emptyObject = __webpack_require__(22);
+var emptyObject = __webpack_require__(23);
 var ExecutionEnvironment = __webpack_require__(7);
-var Transform = __webpack_require__(21);
+var Transform = __webpack_require__(22);
 var Mode = __webpack_require__(111);
-var checkPropTypes = __webpack_require__(34);
-var shallowEqual = __webpack_require__(35);
+var checkPropTypes = __webpack_require__(35);
+var shallowEqual = __webpack_require__(36);
 var FastNoSideEffects = __webpack_require__(112);
 
 // Relying on the `invariant()` implementation lets us
@@ -56741,11 +56791,11 @@ module.exports = TouchEventUtils;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__UIManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ViewPropTypes__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react__ = __webpack_require__(1);
@@ -56938,7 +56988,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_3__StyleSheet__["a" /* default */].create
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_InteractionManager__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports_InteractionManager__ = __webpack_require__(38);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
@@ -58093,7 +58143,7 @@ function cloneReferencedElement(element, config) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */]);
 
@@ -58105,7 +58155,7 @@ function cloneReferencedElement(element, config) {
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ColorPropType__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58191,7 +58241,7 @@ var PickerItemPropType = function PickerItemPropType(props, propName, componentN
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__View_ViewStylePropTypes__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__View_ViewStylePropTypes__ = __webpack_require__(30);
 /**
  * Copyright (c) 2017-present, Nicolas Gallagher.
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -58216,7 +58266,7 @@ var PickerStylePropTypes = Object.assign({}, __WEBPACK_IMPORTED_MODULE_1__View_V
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ColorPropType__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__StyleSheet__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__View__ = __webpack_require__(5);
@@ -58452,11 +58502,11 @@ var styles = __WEBPACK_IMPORTED_MODULE_1__StyleSheet__["a" /* default */].create
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports_Platform__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_ScrollView__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exports_ScrollView__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__VirtualizedSectionList__ = __webpack_require__(282);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -59045,7 +59095,7 @@ function getItem(sections, index) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__["a" /* default */]);
 
@@ -59679,12 +59729,12 @@ var SwipeableListViewDataSource = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createElement__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_multiplyStyleLengthValue__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__UIManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__UIManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ViewPropTypes__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react__ = __webpack_require__(1);
@@ -59912,16 +59962,16 @@ var styles = __WEBPACK_IMPORTED_MODULE_4__StyleSheet__["a" /* default */].create
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyLayout__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_ExecutionEnvironment__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fbjs_lib_ExecutionEnvironment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_fbjs_lib_ExecutionEnvironment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__createElement__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__findNodeHandle__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__createElement__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__findNodeHandle__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_StyleSheetPropType__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_StyleSheetPropType__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__TextInputStylePropTypes__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__modules_TextInputState__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ViewPropTypes__ = __webpack_require__(10);
@@ -60368,18 +60418,18 @@ var styles = __WEBPACK_IMPORTED_MODULE_7__StyleSheet__["a" /* default */].create
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_applyNativeMethods__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ColorPropType__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_ensureComponentIsNative__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Touchable_ensurePositiveDelayProps__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__StyleSheet__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_timer_mixin__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_timer_mixin__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_timer_mixin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_timer_mixin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Touchable__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Touchable__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__TouchableWithoutFeedback__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__View__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ViewPropTypes__ = __webpack_require__(10);
@@ -60669,7 +60719,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_6__StyleSheet__["a" /* default */].create
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_UnimplementedView__ = __webpack_require__(24);
 /**
  * Copyright 2017-present, Nicolas Gallagher
  *
@@ -60707,7 +60757,7 @@ var styles = __WEBPACK_IMPORTED_MODULE_6__StyleSheet__["a" /* default */].create
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_UnimplementedView__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_UnimplementedView__ = __webpack_require__(24);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -60778,7 +60828,7 @@ var PointPropType = Object(__WEBPACK_IMPORTED_MODULE_0__modules_createStrictShap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ChatBubble___ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ChatBubble___ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Avatar___ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IsTyping___ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ChatScrollArea___ = __webpack_require__(132);
@@ -60849,7 +60899,7 @@ const styles = {
     p: {
         color: '#FFFFFF',
         fontSize: 16,
-        fontWeight: 300,
+        fontWeight: '300',
         margin: 0,
         marginRight: 30
     },
@@ -60925,7 +60975,7 @@ const styles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BubbleGroup__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatBubble__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ChatBubble__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Avatar__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__IsTyping__ = __webpack_require__(131);
@@ -60935,6 +60985,7 @@ const styles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__DateRow__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__LoadingMessages__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__SystemChatBubble__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_react_native__ = __webpack_require__(14);
 // Copyright 2017 Brandon Mowat
 // Written, developed, and designed by Brandon Mowat for the purpose of helping
 // other developers make chat interfaces.
@@ -60946,6 +60997,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 
 
 
@@ -61052,9 +61104,19 @@ class ChatFeed extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
      * render : renders our chat feed
      */
     render() {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { id: 'react-native-bell-chat__chat-panel ' + (this.props.className ? this.props.className : ''), style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].chatPanel) },
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_12_react_native__["g" /* View */], { style: [
+                __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].chatPanel
+            ] },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](this.props.customScrollArea, { minHeight: this.props.minHeight, maxHeight: this.props.maxHeight, apiRef: e => this.scrollApi = e, loadOldMessagesThreshold: this.props.loadOldMessagesThreshold, onLoadOldMessages: this.onLoadOldMessages },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { style: Object.assign({}, __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].chatMessages, (this.props.showRecipientAvatar && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showRecipientAvatarChatMessagesStyle), (this.props.showRecipientAvatar && this.props.showRecipientAvatarChatMessagesStyle), (this.props.showIsTyping && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showIsTypingChatMessagesStyle), (this.props.showIsTyping && this.props.showIsTypingChatMessagesStyle), (this.props.showRecipientLastSeenMessage && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showRecipientLastSeenMessageChatMessagesStyle), (this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle)), className: "react-native-bell-chat__chat-messages" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_12_react_native__["g" /* View */], { style: [
+                        __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].chatMessages,
+                        (this.props.showRecipientAvatar && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showRecipientAvatarChatMessagesStyle),
+                        (this.props.showRecipientAvatar && this.props.showRecipientAvatarChatMessagesStyle),
+                        (this.props.showIsTyping && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showIsTypingChatMessagesStyle),
+                        (this.props.showIsTyping && this.props.showIsTypingChatMessagesStyle),
+                        (this.props.showRecipientLastSeenMessage && __WEBPACK_IMPORTED_MODULE_3__styles__["a" /* default */].showRecipientLastSeenMessageChatMessagesStyle),
+                        (this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle),
+                    ] },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](this.props.customLoadingMessages, { isVisible: this.props.showLoadingMessages || this.state.isLoadingMessages }),
                     this.renderMessages(this.props.messages),
                     this.props.showIsTyping && this.renderIsTyping()))));
@@ -61108,11 +61170,7 @@ ChatFeed.defaultProps = {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
     chatPanel: {
-        display: 'flex',
-        flexDirection: 'column',
-        flex: 1,
         overflow: 'hidden',
-        position: 'relative'
     },
     showRecipientAvatarChatMessagesStyle: {
         paddingLeft: 50
@@ -61127,8 +61185,7 @@ ChatFeed.defaultProps = {
     chatBubbleWrapper: {
         marginTop: 10,
         marginBottom: 10,
-        overflow: 'auto',
-        position: 'relative',
+        overflow: 'visible',
     },
     img: {
         borderRadius: 100,
@@ -61173,6 +61230,8 @@ const groupBy = (array, groupingKeyFn) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_native__ = __webpack_require__(14);
+
 
 const styles = {
     chatInput: {
@@ -61191,8 +61250,8 @@ const styles = {
 };
 const ChatInput = (props) => {
     const { inputStyles, inputPlaceholder } = props;
-    return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-native-bell-chat__chat-input", style: styles.chatInput },
-        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", style: inputStyles || styles.inputStyle, placeholder: inputPlaceholder })));
+    return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["g" /* View */], { style: styles.chatInput },
+        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["e" /* TextInput */], { style: [inputStyles || styles.inputStyle], placeholder: inputPlaceholder })));
 };
 /* unused harmony default export */ var _unused_webpack_default_export = (ChatInput);
 
