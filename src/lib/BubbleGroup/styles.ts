@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface BubbleGroupStyles{
+export interface BubbleGroupStyles {
   chatBubbleWrapper: React.CSSProperties;
   bubbleGroupHeader: React.CSSProperties;
 }
@@ -17,5 +17,4 @@ export default {
     fontWeight: 400,
     color: '#999',
   },
-  
 } as BubbleGroupStyles;

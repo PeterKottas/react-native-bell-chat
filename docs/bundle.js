@@ -9061,10 +9061,11 @@ const styles = {
 };
 const Avatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["g" /* View */], { style: [
         styles.container,
-        props.containerStyle
+        props.avatarStyles && props.avatarStyles.containerStyle
     ] },
     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: [
-            styles.text
+            styles.text,
+            props.avatarStyles && props.avatarStyles.textStyle
         ] }, props.author.avatarName ?
         props.author.avatarName
         :

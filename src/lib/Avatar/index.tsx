@@ -2,9 +2,14 @@ import * as React from 'react';
 import { Author } from '../Author';
 import { StyleProp, ViewStyle, View, Text, TextStyle } from 'react-native';
 
+export interface AvatarStyles {
+  containerStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+}
+
 export interface AvatarProps {
   author: Author;
-  containerStyle?: StyleProp<ViewStyle>;
+  avatarStyles?: AvatarStyles;
 }
 
 const styles = {
@@ -33,12 +38,13 @@ const Avatar: React.SFC<AvatarProps> = props => props.author && (
   <View
     style={[
       styles.container,
-      props.containerStyle
+      props.avatarStyles && props.avatarStyles.containerStyle
     ]}
   >
     <Text
       style={[
-        styles.text
+        styles.text,
+        props.avatarStyles && props.avatarStyles.textStyle
       ]}
     >{
         props.author.avatarName ?
