@@ -16,7 +16,7 @@ export interface DateRowProps {
 const DateRow = (props: DateRowProps) => {
   return props.date && (
     <div
-      className="react-bell-chat__date-row"
+      className="react-native-bell-chat__date-row"
       style={{
         ...styles.container,
         ...props.containerStyles

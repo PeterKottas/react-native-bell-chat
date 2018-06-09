@@ -121,7 +121,7 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
   }
 
   componentDidMount() {
-    this.scrollApi && this.scrollApi.scrollToBottom();
+    this.scrollApi && this.scrollApi.scrollToBottom(false);
   }
 
   getSnapshotBeforeUpdate(prevProps: ChatFeedProps, prevState: ChatFeedState) {
@@ -138,10 +138,10 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
 
   componentDidUpdate(prevProps: ChatFeedProps, prevState: ChatFeedState, snapshot: ChatFeedSnapshot) {
     if (this.props.messages.length !== prevProps.messages.length && snapshot && snapshot.wasScrolledToBottom) {
-      this.scrollApi.scrollToBottom();
-    } else if (this.props.messages.length !== prevProps.messages.length && snapshot) {
+      this.scrollApi.scrollToBottom(false);
+    } else if (this.props.messages.length !== prevProps.messages.length && snapshot && prevState.isLoadingMessages) {
       const scrollHeight = this.scrollApi && this.scrollApi.scrollHeight();
-      this.scrollApi.scrollTo(scrollHeight - snapshot.scrollHeight);
+      this.scrollApi.scrollTo(scrollHeight - snapshot.scrollHeight, false);
     }
   }
 
@@ -220,7 +220,7 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
   render() {
     return (
       <div
-        id={'react-bell-chat__chat-panel ' + (this.props.className ? this.props.className : '')}
+        id={'react-native-bell-chat__chat-panel ' + (this.props.className ? this.props.className : '')}
         style={{
           ...styles.chatPanel
         }}
@@ -242,7 +242,7 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
               ...(this.props.showRecipientLastSeenMessage && styles.showRecipientLastSeenMessageChatMessagesStyle),
               ...(this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle),
             }}
-            className="react-bell-chat__chat-messages"
+            className="react-native-bell-chat__chat-messages"
           >
             {<this.props.customLoadingMessages isVisible={this.props.showLoadingMessages || this.state.isLoadingMessages} />}
             {this.renderMessages(this.props.messages)}
@@ -269,7 +269,7 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
             isLoadingMessages: false,
           }, () => {
             if (this.scrollApi.scrolledToLoadThreshold()) {
-              this.scrollApi.scrollTo(this.props.loadOldMessagesThreshold + 1);
+              this.scrollApi.scrollTo(this.props.loadOldMessagesThreshold + 1, false);
             }
             resolve();
           });

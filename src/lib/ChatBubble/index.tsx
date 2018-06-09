@@ -81,13 +81,13 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
         style={{
           ...styles.chatBubbleWrapper,
         }}
-        className="react-bell-chat__chat-bubble"
+        className="react-native-bell-chat__chat-bubble"
       >
         <div style={chatBubbleStyles}>
           <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
           {this.props.message.createdOn && (
             <span
-              className="react-bell-chat__chat-bubble__created-on"
+              className="react-native-bell-chat__chat-bubble__created-on"
               style={{
                 ...styles.createdOn,
                 ...(youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
@@ -98,7 +98,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
           )}
           {this.props.message.isSend !== undefined && youAreAuthor && (
             <span
-              className="react-bell-chat__chat-bubble__is-send"
+              className="react-native-bell-chat__chat-bubble__is-send"
               style={{
                 ...styles.isSend,
               }}
@@ -155,7 +155,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
           this.props.lastSeenByAuthors.length > 0 && this.props.customLastSeenAvatar &&
           (
             <div
-              className="react-bell-chat__chat-bubble__last-seen-by__container"
+              className="react-native-bell-chat__chat-bubble__last-seen-by__container"
               style={styles.lastSeenByContainer}
               onMouseEnter={() => this.setState({ mouseOverLastSeenContainer: true })}
               onMouseLeave={() => this.setState({ mouseOverLastSeenContainer: false })}

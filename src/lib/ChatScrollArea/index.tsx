@@ -1,8 +1,8 @@
 import * as React from 'react';
+import { ScrollView, View, StyleProp, ViewStyle } from 'react-native';
 
-const styles: { [key: string]: React.CSSProperties } = {
+const styles: { [key: string]: StyleProp<ViewStyle> } = {
   chatHistory: {
-    overflow: 'auto',
     padding: '0 10px',
     // flexDirection: 'column-reverse'
   }
@@ -12,15 +12,15 @@ export interface ChatScrollAreaProps {
   maxHeight?: string | number;
   minHeight?: string | number;
   children?: JSX.Element | JSX.Element[];
-  containerStyles?: React.CSSProperties;
+  containerStyles?: StyleProp<ViewStyle>;
   apiRef?: (api: ChatScrollAreaApi) => void;
   loadOldMessagesThreshold: number;
   onLoadOldMessages: () => Promise<void>;
 }
 
 export interface ChatScrollAreaApi {
-  scrollToBottom: (behavior?: ScrollBehavior) => void;
-  scrollTo: (top: number) => void;
+  scrollToBottom: (animated?: boolean) => void;
+  scrollTo: (top: number, animated?: boolean) => void;
   scrollTop: () => number;
   scrollHeight: () => number;
   clientHeight: () => number;
@@ -29,47 +29,65 @@ export interface ChatScrollAreaApi {
 }
 
 export class ChatScrollArea extends React.Component<ChatScrollAreaProps> {
-  scrollContainer: HTMLDivElement;
+  private scrollContainer: ScrollView;
+  private clientHeight: number;
+  private scrollHeight: number;
+  private scrollTop: number;
+
   constructor(props: ChatScrollAreaProps) {
     super(props);
+    this.clientHeight = 0;
+    this.scrollHeight = 0;
+    this.scrollTop = 0;
   }
 
   public render() {
     return (
-      <div
+      <ScrollView
+        onLayout={event => {
+          this.clientHeight = event.nativeEvent.layout.height;
+        }}
+        contentContainerStyle={{ padding: 10 }}
         ref={scrollContainer => {
           this.scrollContainer = scrollContainer;
           this.props.apiRef && this.props.apiRef({
-            scrollToBottom: (behavior = 'auto') => scrollContainer && (scrollContainer.scrollTo ?
-              scrollContainer.scrollTo({
-                top: scrollContainer.scrollHeight,
-                behavior
-              }) :
-              scrollContainer.scrollTop = scrollContainer.scrollHeight),
-            scrollTo: top => scrollContainer && (scrollContainer.scrollTo ?
-              scrollContainer.scrollTo({
-                top: top
-              })
-              :
-              scrollContainer.scrollTop = top),
-            scrolledToBottom: () => this.scrollContainer.clientHeight + this.scrollContainer.scrollTop === this.scrollContainer.scrollHeight,
-            scrolledToLoadThreshold: () => this.scrollContainer && this.scrollContainer.scrollTop <= this.props.loadOldMessagesThreshold,
-            scrollTop: () => this.scrollContainer && this.scrollContainer.scrollTop,
-            scrollHeight: () => this.scrollContainer && this.scrollContainer.scrollHeight,
-            clientHeight: () => this.scrollContainer && this.scrollContainer.clientHeight,
+            scrollToBottom: (animated = true) => scrollContainer &&
+              scrollContainer.scrollToEnd({
+                animated
+              }),
+            scrollTo: (top, animated = true) => scrollContainer && scrollContainer.scrollTo({
+              y: top,
+              animated
+            }),
+            scrolledToBottom: () => this.clientHeight + this.scrollTop === this.scrollHeight,
+            scrolledToLoadThreshold: () => this.scrollContainer && this.scrollTop <= this.props.loadOldMessagesThreshold,
+            scrollTop: () => this.scrollContainer && this.scrollTop,
+            scrollHeight: () => this.scrollContainer && this.scrollHeight,
+            clientHeight: () => this.scrollContainer && this.clientHeight,
           });
         }}
-        className="react-bell-chat__chat-history"
-        style={{
-          ...styles.chatHistory,
-          ...(this.props.maxHeight !== undefined ? { maxHeight: this.props.maxHeight } : {}),
-          ...(this.props.minHeight !== undefined ? { minHeight: this.props.minHeight } : {}),
-          ...this.props.containerStyles
+        style={[
+          styles.chatHistory,
+          (this.props.maxHeight !== undefined ? { maxHeight: this.props.maxHeight } : {}),
+          (this.props.minHeight !== undefined ? { minHeight: this.props.minHeight } : {}),
+          this.props.containerStyles
+        ]}
+        onScroll={e => {
+          if (this.scrollContainer && e.nativeEvent.contentOffset.y <= this.props.loadOldMessagesThreshold) {
+            this.props.onLoadOldMessages();
+          }
+          this.scrollTop = e.nativeEvent.contentOffset.y;
         }}
-        onScroll={e => (this.scrollContainer && this.scrollContainer.scrollTop <= this.props.loadOldMessagesThreshold) && this.props.onLoadOldMessages()}
+        scrollEventThrottle={16}
       >
-        {this.props.children}
-      </div>
+        <View
+          onLayout={event => {
+            this.scrollHeight = event.nativeEvent.layout.height + 20;
+          }}
+        >
+          {this.props.children}
+        </View>
+      </ScrollView>
     );
   }
 }

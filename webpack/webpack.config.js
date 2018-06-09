@@ -13,12 +13,7 @@ module.exports = merge(require('./webpack.config.base'), {
         })
     ],
     externals: {
-        "react": "react",
+        "react-native": "react-native",
         "prop-types": "prop-types",
-        "react-day-picker": "react-day-picker",
-        "react-day-picker/DayPickerInput": "react-day-picker/DayPickerInput",
-        "react-smooth-collapse": "react-smooth-collapse",
-        "react-tippy": "react-tippy",
-        "react-textarea-autosize": "react-textarea-autosize"
     }
 });

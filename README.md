@@ -1,12 +1,12 @@
-# :bell: react-bell-chat
+# :bell: react-native-bell-chat
 
 A library of React components for building chat UIs.
 
 # DEMO
 
-[Live demo](https://peterkottas.github.io/react-bell-chat/)
+[Live demo](https://peterkottas.github.io/react-native-bell-chat/)
 
-[![NPM](https://nodei.co/npm/react-bell-chat.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-bell-chat/)
+[![NPM](https://nodei.co/npm/react-native-bell-chat.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-bell-chat/)
 
 ## Features
 
@@ -23,16 +23,16 @@ Keep in mind that this project is still in the early stages of development. If y
 
 ## Installation
 
-`npm install react-bell-chat --save`
+`npm install react-native-bell-chat --save`
 
 OR
 
-`yarn add react-bell-chat`
+`yarn add react-native-bell-chat`
 
 ## Basic Usage
 
 ```typescript
-import { ChatFeed } from 'react-bell-chat'
+import { ChatFeed } from 'react-native-bell-chat'
 
 // Your code stuff...
 

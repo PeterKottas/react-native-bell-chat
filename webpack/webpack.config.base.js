@@ -5,16 +5,22 @@ var isLocalBuild = process.env && process.env.NODE_ENV && process.env.NODE_ENV.t
 
 module.exports = {
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        alias: {
+            'react-native$': 'react-native-web'
+        }
     },
     entry: { 'index': './src/lib/index.ts' },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                include: /src/,
+                include: [
+                    /src/
+                ],
                 use: 'awesome-typescript-loader?silent=true'
-            }
+            },
+            require('./webpack.shared.js').babelLoader,
         ]
     },
     output:

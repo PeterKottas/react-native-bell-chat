@@ -1,17 +1,46 @@
 {
   "compilerOptions": {
-    "noUnusedLocals": true,    
-    "declaration": true,
     "baseUrl": ".",
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2015",
+    "module": "esnext",
     "jsx": "react",
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "lib": [ "es6", "dom" ],
-    "types": []
+    "noUnusedLocals": true,
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "types": [
+      "react",
+      "react-native"
+    ],
+    "paths": {
+      "history": [
+        "./node_modules/@types/history/index"
+      ],
+      "react-router": [
+        "./node_modules/@types/react-router/index"
+      ],
+      "redux": [
+        "./node_modules/@types/redux/index"
+      ],
+      "react": [
+        "./node_modules/@types/react/index"
+      ],
+      "react-native-button": [
+        "./src/demo/declarations/react-native-button.d.ts"
+      ]
+    }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["./node_modules/**/*"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

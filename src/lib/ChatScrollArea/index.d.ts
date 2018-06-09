@@ -1,16 +1,17 @@
 /// <reference types="react" />
 import * as React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 export interface ChatScrollAreaProps {
     maxHeight?: string | number;
     minHeight?: string | number;
     children?: JSX.Element | JSX.Element[];
-    containerStyles?: React.CSSProperties;
+    containerStyles?: StyleProp<ViewStyle>;
     apiRef?: (api: ChatScrollAreaApi) => void;
     loadOldMessagesThreshold: number;
     onLoadOldMessages: () => Promise<void>;
 }
 export interface ChatScrollAreaApi {
-    scrollToBottom: (behavior?: ScrollBehavior) => void;
+    scrollToBottom: (animated?: boolean) => void;
     scrollTo: (top: number) => void;
     scrollTop: () => number;
     scrollHeight: () => number;
@@ -19,7 +20,10 @@ export interface ChatScrollAreaApi {
     scrolledToLoadThreshold: () => boolean;
 }
 export declare class ChatScrollArea extends React.Component<ChatScrollAreaProps> {
-    scrollContainer: HTMLDivElement;
+    private scrollContainer;
+    private clientHeight;
+    private scrollHeight;
+    private scrollTop;
     constructor(props: ChatScrollAreaProps);
     render(): JSX.Element;
 }

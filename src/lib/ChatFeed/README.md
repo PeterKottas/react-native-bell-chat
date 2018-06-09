@@ -13,13 +13,13 @@ The `ChatFeed` component is your one stop shop for all your chat needs. If you d
 * **yourAuthorId**: `number` - Your author id.
 * **showRecipientAvatar**: `Boolean` - Should the bubbles show the name of the sender?
 * **onMessageSendRef** _new_: `Function` - Callback that gives you a function you can call to scroll the chat down. Usually you would call this when message is send.
-* **customChatBubble** _new_: `React.Component` - A custom chat bubble that you can make youryour! (If you're using TypeScript for your project, you can `import` the `ChatBubbleProps` for your components `constructor`)
-* **customAvatar** _new_: `React.Component` - A custom avatar component that you can make youryour! (If you're using TypeScript for your project, you can `import` the `AvatarProps` for your components `constructor`)
-* **customScrollArea** _new_: `React.Component` - A custom scroll area component that you can make youryour! (If you're using TypeScript for your project, you can `import` the `ChatScrollAreaProps` for your components `constructor`)
+* **customChatBubble** _new_: `React.Component` - A custom chat bubble that you can make yourself! (If you're using TypeScript for your project, you can `import` the `ChatBubbleProps` for your components `constructor`)
+* **customAvatar** _new_: `React.Component` - A custom avatar component that you can make yourself! (If you're using TypeScript for your project, you can `import` the `AvatarProps` for your components `constructor`)
+* **customScrollArea** _new_: `React.Component` - A custom scroll area component that you can make yourself! (If you're using TypeScript for your project, you can `import` the `ChatScrollAreaProps` for your components `constructor`)
 
 ```javascript
 import React from 'react';
-import { ChatFeed, Message, ChatBubbleProps } from 'react-bell-chat';
+import { ChatFeed, Message, ChatBubbleProps } from 'react-native-bell-chat';
 import MyChatBubble from './MyChatBubble';
 
 class MyChat extends React.Component {

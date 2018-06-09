@@ -18,7 +18,7 @@ const SystemChatBubble = (props: SystemChatBubbleProps) => {
   const time = props.message.createdOn && props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
   return props.message && (
     <div
-      className="react-bell-chat__chat-bubble react-bell-chat__chat-bubble--system"
+      className="react-native-bell-chat__chat-bubble react-native-bell-chat__chat-bubble--system"
       style={{
         ...styles.container,
         ...bubbleStyles.systemChatBubbleContainerStyle
@@ -26,7 +26,7 @@ const SystemChatBubble = (props: SystemChatBubbleProps) => {
     >
       {time && (
         <span
-          className="react-bell-chat__chat-bubble--system__created-on"
+          className="react-native-bell-chat__chat-bubble--system__created-on"
           title={props.message.createdOn.toLocaleString()}
         >
           {time}:{' '}
