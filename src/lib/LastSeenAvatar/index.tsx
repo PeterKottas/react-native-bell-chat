@@ -12,13 +12,13 @@ const styles = {
   container: {
     width: 20,
     height: 20,
-    color: 'white',
     backgroundColor: 'rgb(153, 153, 153)',
     borderRadius: 10,
     textAlign: 'center',
     transition: '0.3s all ease-in-out',
   } as StyleProp<ViewStyle>,
   text: {
+    color: 'white',
     fontSize: 10,
     lineHeight: 20,
     fontWeight: '400',
@@ -33,7 +33,7 @@ const LastSeenAvatar: React.SFC<LastSeenAvatarProps> = props => props.author && 
     ]}
   >
     <Text
-      style={[]}
+      style={[styles.text, props.textStyle]}
     >{
         props.author.lastSeenAvatarName ?
           props.author.lastSeenAvatarName

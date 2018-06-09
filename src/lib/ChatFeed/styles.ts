@@ -3,7 +3,11 @@ import { ViewStyle, StyleProp } from 'react-native';
 
 export default {
   chatPanel: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
     overflow: 'hidden',
+    position: 'relative'
   } as StyleProp<ViewStyle>,
   showRecipientAvatarChatMessagesStyle: {
     paddingLeft: 50

@@ -16207,13 +16207,13 @@ const styles = {
     container: {
         width: 20,
         height: 20,
-        color: 'white',
         backgroundColor: 'rgb(153, 153, 153)',
         borderRadius: 10,
         textAlign: 'center',
         transition: '0.3s all ease-in-out',
     },
     text: {
+        color: 'white',
         fontSize: 10,
         lineHeight: 20,
         fontWeight: '400',
@@ -16223,7 +16223,7 @@ const LastSeenAvatar = props => props.author && (__WEBPACK_IMPORTED_MODULE_0_rea
         styles.container,
         props.containerStyle
     ] },
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: [] }, props.author.lastSeenAvatarName ?
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_native__["d" /* Text */], { style: [styles.text, props.textStyle] }, props.author.lastSeenAvatarName ?
         props.author.lastSeenAvatarName
         :
             props.author.name[0].toUpperCase())));
@@ -61170,7 +61170,11 @@ ChatFeed.defaultProps = {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
     chatPanel: {
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
         overflow: 'hidden',
+        position: 'relative'
     },
     showRecipientAvatarChatMessagesStyle: {
         paddingLeft: 50
