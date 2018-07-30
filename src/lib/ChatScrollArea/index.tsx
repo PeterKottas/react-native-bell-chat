@@ -59,7 +59,7 @@ export class ChatScrollArea extends React.Component<ChatScrollAreaProps> {
               y: top,
               animated
             }),
-            scrolledToBottom: () => this.clientHeight + this.scrollTop === this.scrollHeight,
+            scrolledToBottom: () => this.clientHeight + this.scrollTop >= this.scrollHeight,
             scrolledToLoadThreshold: () => this.scrollContainer && this.scrollTop <= this.props.loadOldMessagesThreshold,
             scrollTop: () => this.scrollContainer && this.scrollTop,
             scrollHeight: () => this.scrollContainer && this.scrollHeight,

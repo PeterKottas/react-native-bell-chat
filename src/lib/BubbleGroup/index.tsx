@@ -49,7 +49,6 @@ export default class BubbleGroup extends React.Component<BubbleGroupProps> {
 
     const messageNodes = messages.map((message, i) => {
       const props = {
-        key: i,
         yourAuthorId: this.props.yourAuthorId,
         author,
         message,
@@ -65,12 +64,14 @@ export default class BubbleGroup extends React.Component<BubbleGroupProps> {
       return message.authorId !== undefined ?
         (
           <ChatBubble
+            key={i}
             {...props}
           />
         )
         :
         (
           <SystemChatBubble
+            key={i}
             {...props}
           />
         );
