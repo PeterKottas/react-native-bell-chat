@@ -244,7 +244,6 @@ class Chat extends React.Component<ChatProps, ChatState> {
             marginRight: 'auto',
             borderWidth: 1,
             borderColor: '#ddd',
-            paddingBottom: 20,
           }}
         >
           <ChatFeed
@@ -283,181 +282,183 @@ class Chat extends React.Component<ChatProps, ChatState> {
             }}
             onSubmitEditing={() => this.onMessageSubmit()}
           />
-          <View style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row' }}>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.currentUser === 0 ? styles.selected : {}),
-              ]}
-              onPress={() => this.onPress(0)}
-              underlayColor={buttonHighlighColor}
+          <View style={{ padding: 20 }}>
+            <View style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row' }}>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.currentUser === 0 ? styles.selected : {}),
+                ]}
+                onPress={() => this.onPress(0)}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.currentUser === 0 ? styles.buttonTextSelected : {})]}>You</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.currentUser === 1 ? styles.selected : {}),
+                ]}
+                onPress={() => this.onPress(1)}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.currentUser === 1 ? styles.buttonTextSelected : {})]}>Mark</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.currentUser === 2 ? styles.selected : {}),
+                ]}
+                onPress={() => this.onPress(2)}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.currentUser === 2 ? styles.buttonTextSelected : {})]}>Evan</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
             >
-              <Text style={[styles.buttonText, (this.state.currentUser === 0 ? styles.buttonTextSelected : {})]}>You</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.currentUser === 1 ? styles.selected : {}),
-              ]}
-              onPress={() => this.onPress(1)}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.currentUser === 1 ? styles.buttonTextSelected : {})]}>Mark</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.currentUser === 2 ? styles.selected : {}),
-              ]}
-              onPress={() => this.onPress(2)}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.currentUser === 2 ? styles.buttonTextSelected : {})]}>Evan</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
-          >
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.useCustomBubble ? styles.selected : {}),
-              ]}
-              onPress={() =>
-                this.setState({ useCustomBubble: !this.state.useCustomBubble })
-              }
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.useCustomBubble ? styles.buttonTextSelected : {})]}>Custom Bubbles</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.simulateTyping ? styles.selected : {}),
-              ]}
-              onPress={() => {
-                if (this.state.simulateTyping) {
-                  clearInterval(this.firstAuthorTimer);
-                  clearInterval(this.secondAuthorTimer);
-                } else {
-                  this.firstAuthorTimer = setInterval(() => this.setState({
-                    authors: this.state.authors.slice(0).map((a, i) => i === 1 ? a : { ...a, isTyping: !a.isTyping })
-                    // tslint:disable-next-line:no-any
-                  }), 2000) as any;
-                  this.secondAuthorTimer = setInterval(() => this.setState({
-                    authors: this.state.authors.slice(0).map((a, i) => i === 2 ? a : { ...a, isTyping: !a.isTyping })
-                    // tslint:disable-next-line:no-any
-                  }), 3200) as any;
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.useCustomBubble ? styles.selected : {}),
+                ]}
+                onPress={() =>
+                  this.setState({ useCustomBubble: !this.state.useCustomBubble })
                 }
-                this.setState({ simulateTyping: !this.state.simulateTyping });
-              }}
-              underlayColor={buttonHighlighColor}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.useCustomBubble ? styles.buttonTextSelected : {})]}>Custom Bubbles</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.simulateTyping ? styles.selected : {}),
+                ]}
+                onPress={() => {
+                  if (this.state.simulateTyping) {
+                    clearInterval(this.firstAuthorTimer);
+                    clearInterval(this.secondAuthorTimer);
+                  } else {
+                    this.firstAuthorTimer = setInterval(() => this.setState({
+                      authors: this.state.authors.slice(0).map((a, i) => i === 1 ? a : { ...a, isTyping: !a.isTyping })
+                      // tslint:disable-next-line:no-any
+                    }), 2000) as any;
+                    this.secondAuthorTimer = setInterval(() => this.setState({
+                      authors: this.state.authors.slice(0).map((a, i) => i === 2 ? a : { ...a, isTyping: !a.isTyping })
+                      // tslint:disable-next-line:no-any
+                    }), 3200) as any;
+                  }
+                  this.setState({ simulateTyping: !this.state.simulateTyping });
+                }}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.simulateTyping ? styles.buttonTextSelected : {})]}>Simulate typing</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                ]}
+                onPress={() => {
+                  this.setState({
+                    messages: this.state.messages.concat([{
+                      id: Number(new Date()),
+                      createdOn: new Date(),
+                      message: 'Simulated message',
+                      authorId: Math.round(Math.random() + 1)
+                    }])
+                  });
+                }}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText]}>Simulate message</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                ]}
+                onPress={() => {
+                  this.setState({
+                    messages: this.state.messages.concat([{
+                      id: Number(new Date()),
+                      createdOn: new Date(),
+                      message: 'System message',
+                    }])
+                  });
+                }}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText]}>System message</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
             >
-              <Text style={[styles.buttonText, (this.state.simulateTyping ? styles.buttonTextSelected : {})]}>Simulate typing</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-              ]}
-              onPress={() => {
-                this.setState({
-                  messages: this.state.messages.concat([{
-                    id: Number(new Date()),
-                    createdOn: new Date(),
-                    message: 'Simulated message',
-                    authorId: Math.round(Math.random() + 1)
-                  }])
-                });
-              }}
-              underlayColor={buttonHighlighColor}
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.showAvatar ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ showAvatar: !this.state.showAvatar })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.showAvatar ? styles.buttonTextSelected : {})]}>Show avatar</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.showIsTyping ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ showIsTyping: !this.state.showIsTyping })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.showIsTyping ? styles.buttonTextSelected : {})]}>Show typing</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.showLastSeen ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ showLastSeen: !this.state.showLastSeen })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.showLastSeen ? styles.buttonTextSelected : {})]}>Show last seen</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.showDateRow ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ showDateRow: !this.state.showDateRow })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.showDateRow ? styles.buttonTextSelected : {})]}>Show date row</Text>
+              </TouchableHighlight>
+            </View>
+            <View
+              style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
             >
-              <Text style={[styles.buttonText]}>Simulate message</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-              ]}
-              onPress={() => {
-                this.setState({
-                  messages: this.state.messages.concat([{
-                    id: Number(new Date()),
-                    createdOn: new Date(),
-                    message: 'System message',
-                  }])
-                });
-              }}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText]}>System message</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
-          >
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.showAvatar ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ showAvatar: !this.state.showAvatar })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.showAvatar ? styles.buttonTextSelected : {})]}>Show avatar</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.showIsTyping ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ showIsTyping: !this.state.showIsTyping })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.showIsTyping ? styles.buttonTextSelected : {})]}>Show typing</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.showLastSeen ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ showLastSeen: !this.state.showLastSeen })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.showLastSeen ? styles.buttonTextSelected : {})]}>Show last seen</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.showDateRow ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ showDateRow: !this.state.showDateRow })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.showDateRow ? styles.buttonTextSelected : {})]}>Show date row</Text>
-            </TouchableHighlight>
-          </View>
-          <View
-            style={{ display: 'flex', justifyContent: 'space-around', marginTop: 10, flexDirection: 'row' }}
-          >
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.showLoadingMessages ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ showLoadingMessages: !this.state.showLoadingMessages })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.showLoadingMessages ? styles.buttonTextSelected : {})]}>Show Loading</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={[
-                styles.button,
-                (this.state.hasOldMessages ? styles.selected : {}),
-              ]}
-              onPress={() => this.setState({ hasOldMessages: !this.state.hasOldMessages })}
-              underlayColor={buttonHighlighColor}
-            >
-              <Text style={[styles.buttonText, (this.state.hasOldMessages ? styles.buttonTextSelected : {})]}>Has more messages</Text>
-            </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.showLoadingMessages ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ showLoadingMessages: !this.state.showLoadingMessages })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.showLoadingMessages ? styles.buttonTextSelected : {})]}>Show Loading</Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[
+                  styles.button,
+                  (this.state.hasOldMessages ? styles.selected : {}),
+                ]}
+                onPress={() => this.setState({ hasOldMessages: !this.state.hasOldMessages })}
+                underlayColor={buttonHighlighColor}
+              >
+                <Text style={[styles.buttonText, (this.state.hasOldMessages ? styles.buttonTextSelected : {})]}>Has more messages</Text>
+              </TouchableHighlight>
+            </View>
           </View>
         </View>
       </View>
