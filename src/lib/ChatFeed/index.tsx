@@ -234,7 +234,8 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
     return (
       <View
         style={[
-          chatStyles.chatPanel
+          chatStyles.chatPanel,
+          chatFeedStyles && chatFeedStyles.chatPanel
         ]}
       >
         <this.props.customScrollArea
@@ -248,6 +249,7 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
           <View
             style={[
               chatStyles.chatMessages,
+              chatFeedStyles && chatFeedStyles.chatMessages,
               (this.props.showRecipientAvatar && chatStyles.showRecipientAvatarChatMessagesStyle),
               (this.props.showRecipientAvatar && chatFeedStyles && chatFeedStyles.showRecipientAvatarChatMessagesStyle),
               (this.props.showIsTyping && chatStyles.showIsTypingChatMessagesStyle),
