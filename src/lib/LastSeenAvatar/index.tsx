@@ -14,8 +14,9 @@ const styles = {
     height: 20,
     backgroundColor: 'rgb(153, 153, 153)',
     borderRadius: 10,
-    textAlign: 'center',
-    transition: '0.3s all ease-in-out',
+    transitionDuration: '0.3s',
+    transitionProperty: 'all',
+    transitionTimingFunction: 'ease-in-out'
   } as StyleProp<ViewStyle>,
   text: {
     color: 'white',

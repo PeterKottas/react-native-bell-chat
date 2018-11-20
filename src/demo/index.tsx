@@ -211,6 +211,29 @@ class Chat extends React.Component<ChatProps, ChatState> {
         >
           npm i -S react-native-bell-chat
         </Text>
+        <Text
+          style={{
+            textAlign: 'center',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          OR
+        </Text>
+        <Text
+          style={{
+            textAlign: 'center',
+            margin: 20,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            backgroundColor: '#eee',
+            padding: 10,
+            paddingLeft: 20,
+            paddingRight: 20
+          }}
+        >
+          yarn add react-native-bell-chat
+        </Text>
         <View
           style={{
             shadowColor: 'rgba(0, 0, 0, .08)',
