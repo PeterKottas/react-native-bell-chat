@@ -12,7 +12,7 @@ import { ChatBubbleStyles } from '../ChatBubble/';
 import Avatar, { AvatarProps } from '../Avatar';
 import IsTyping from '../IsTyping';
 import ChatScrollArea, { ChatScrollAreaProps, ChatScrollAreaApi } from '../ChatScrollArea';
-import LastSeenAvatar, { LastSeenAvatarProps } from '../LastSeenAvatar';
+import LastSeenAvatar, { LastSeenAvatarProps, LastSeenAvatarStyles } from '../LastSeenAvatar';
 import { groupBy } from '../utils/utils';
 import DateRow, { DateRowProps } from '../DateRow';
 import LoadingMessages, { LoadingMessagesProps } from '../LoadingMessages';
@@ -31,6 +31,7 @@ export interface ChatStyles {
   bubbleStyles?: ChatBubbleStyles;
   chatScrollArea?: ChatScrollAreaStyles;
   avatarStyles?: AvatarStyles;
+  lastSeenAvatarStyles?: LastSeenAvatarStyles;
   dateRowStyles?: DateRowStyles;
   loadingMessagesStyle?: LoadingMessagesStyle;
   isTypingStyles?: IsTypingStyles;
@@ -158,7 +159,7 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
     if (!styles) {
       styles = {};
     }
-    const { bubbleStyles, dateRowStyles } = styles;
+    const { bubbleStyles, dateRowStyles, avatarStyles, lastSeenAvatarStyles } = styles;
     const { customChatBubble, showRecipientAvatar } = this.props;
 
     // First group by days
@@ -189,6 +190,8 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
               showRecipientAvatar={showRecipientAvatar}
               customChatBubble={customChatBubble}
               bubbleStyles={bubbleStyles}
+              avatarStyles={avatarStyles}
+              lastSeenAvatarStyles={lastSeenAvatarStyles}
               showRecipientLastSeenMessage={this.props.showRecipientLastSeenMessage}
               customAvatar={this.props.customAvatar}
               customLastSeenAvatar={this.props.customLastSeenAvatar}
