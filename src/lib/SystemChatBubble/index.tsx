@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { ChatBubbleProps, defaultBubbleStyles } from '../ChatBubble';
+import { ChatBubbleProps } from '../ChatBubble';
 import { View, ViewStyle, StyleProp, Text } from 'react-native';
+import { ChatBubbleStyles } from './../ChatBubble/styles';
 
-const styles = {
-  container: {
+const systemChatBubbleStyles: ChatBubbleStyles = {
+  systemChatBubbleContainer: {
     textAlign: 'center',
     fontSize: 12,
     color: 'rgba(0, 0, 0, 0.55)'
@@ -14,18 +15,30 @@ export interface SystemChatBubbleProps extends ChatBubbleProps {
 }
 
 const SystemChatBubble: React.SFC<SystemChatBubbleProps> = props => {
-  let { bubbleStyles } = props;
-  bubbleStyles = bubbleStyles || defaultBubbleStyles;
+  let {
+    styles
+  } = props;
+  if (!styles) {
+    styles = {};
+  }
+  const {
+    systemChatBubbleContainer,
+    systemChatBubbleText
+  } = styles;
   const time = props.message.createdOn && props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
   return props.message && (
     <View
       style={[
-        styles.container,
-        bubbleStyles.systemChatBubbleContainerStyle
+        systemChatBubbleStyles.systemChatBubbleContainer,
+        systemChatBubbleContainer
       ]}
     >
       {time && (
         <Text
+          style={[
+            systemChatBubbleStyles.systemChatBubbleText,
+            systemChatBubbleText
+          ]}
         /*title={props.message.createdOn.toLocaleString()}*/
         >
           {time}:{' '}

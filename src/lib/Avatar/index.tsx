@@ -3,16 +3,16 @@ import { Author } from '../Author';
 import { StyleProp, ViewStyle, View, Text, TextStyle } from 'react-native';
 
 export interface AvatarStyles {
-  containerStyle?: StyleProp<ViewStyle>;
-  textStyle?: StyleProp<TextStyle>;
+  container?: StyleProp<ViewStyle>;
+  text?: StyleProp<TextStyle>;
 }
 
 export interface AvatarProps {
   author: Author;
-  avatarStyles?: AvatarStyles;
+  styles?: AvatarStyles;
 }
 
-const styles = {
+const avatarStyles: AvatarStyles = {
   container: {
     position: 'absolute',
     left: -50,
@@ -34,25 +34,35 @@ const styles = {
   } as StyleProp<TextStyle>
 };
 
-const Avatar: React.SFC<AvatarProps> = props => props.author && (
-  <View
-    style={[
-      styles.container,
-      props.avatarStyles && props.avatarStyles.containerStyle
-    ]}
-  >
-    <Text
+const Avatar: React.SFC<AvatarProps> = props => {
+  let { styles } = props;
+  if (!styles) {
+    styles = {};
+  }
+  const {
+    container,
+    text
+  } = styles;
+  return props.author && (
+    <View
       style={[
-        styles.text,
-        props.avatarStyles && props.avatarStyles.textStyle
+        avatarStyles.container,
+        container
       ]}
-    >{
-        props.author.avatarName ?
-          props.author.avatarName
-          :
-          props.author.name.split(' ').map(part => part[0]).join('').toUpperCase().substr(0, 3)}
-    </Text>
-  </View>
-);
+    >
+      <Text
+        style={[
+          avatarStyles.text,
+          text
+        ]}
+      >{
+          props.author.avatarName ?
+            props.author.avatarName
+            :
+            props.author.name.split(' ').map(part => part[0]).join('').toUpperCase().substr(0, 3)}
+      </Text>
+    </View>
+  );
+};
 
 export default Avatar;

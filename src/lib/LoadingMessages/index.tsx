@@ -1,33 +1,46 @@
 import * as React from 'react';
 import { StyleProp, ViewStyle, View } from 'react-native';
 
-const styles = {
-  containerStyles: {
+const loadingMessagesStyles: LoadingMessagesStyle = {
+  containerStyle: {
     display: 'flex',
     marginBottom: 10
   } as StyleProp<ViewStyle>,
+  spinnerColor: 'rgb(0, 132, 255)'
 };
 
-export interface LoadingMessagesProps {
-  containerStyles?: StyleProp<ViewStyle>;
+export interface LoadingMessagesStyle {
+  containerStyle?: StyleProp<ViewStyle>;
   spinnerColor?: string;
+}
+
+export interface LoadingMessagesProps {
   isVisible: boolean;
+  styles?: LoadingMessagesStyle;
 }
 
 const LoadingMessages: React.SFC<LoadingMessagesProps> = props => {
-  const { containerStyles } = props;
+  let { styles } = props;
+  if (!styles) {
+    styles = {};
+  }
+  const {
+    containerStyle,
+    spinnerColor
+  } = styles;
   return (
-    <View style={[ styles.containerStyles, containerStyles ]}>
+    <View style={[loadingMessagesStyles.containerStyle, containerStyle]}>
       <svg
         width="40px"
         height="40px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid"
-        style={{ 
+        style={{
           background: 'none',
-          margin: 'auto', 
-          fill: props.spinnerColor, opacity: props.isVisible ? 1 : 0,
+          margin: 'auto',
+          fill: spinnerColor ? spinnerColor : loadingMessagesStyles.spinnerColor,
+          opacity: props.isVisible ? 1 : 0,
           transition: '0.3s all ease-in-out'
         }}
       >
@@ -52,7 +65,5 @@ const LoadingMessages: React.SFC<LoadingMessagesProps> = props => {
     </View>
   );
 };
-LoadingMessages.defaultProps = {
-  spinnerColor: 'rgb(0, 132, 255)'
-};
+
 export default LoadingMessages;

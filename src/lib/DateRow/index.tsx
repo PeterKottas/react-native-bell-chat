@@ -1,30 +1,48 @@
 import * as React from 'react';
-import { StyleProp, TextStyle, Text } from 'react-native';
+import { StyleProp, TextStyle, Text, ViewStyle, View } from 'react-native';
 
-const styles = {
-  container: {
+export interface DateRowStyles {
+  container?: StyleProp<ViewStyle>;
+  text?: StyleProp<TextStyle>;
+}
+
+const dateRowStyles: DateRowStyles = {
+  text: {
     textAlign: 'center',
     fontSize: 12,
     color: 'rgba(0, 0, 0, 0.55)'
-  } as StyleProp<TextStyle>,
+  },
+  container: {
+
+  }
 };
 
 export interface DateRowProps {
   date: Date;
-  containerStyles?: StyleProp<TextStyle>;
+  styles?: DateRowStyles;
 }
 
 const DateRow: React.SFC<DateRowProps> = props => {
+  let { styles } = props;
+  if (!styles) {
+    styles = {};
+  }
+  const {
+    text,
+    container
+  } = styles;
   return props.date && (
-    <Text
-      style={[
-        styles.container,
-        props.containerStyles
-      ]}
+    <View style={[dateRowStyles.container, container]}>
+      <Text
+        style={[
+          dateRowStyles.text,
+          text
+        ]}
       /*title={props.date.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}*/
-    >
-      {props.date.toLocaleDateString()}
-    </Text>
+      >
+        {props.date.toLocaleDateString()}
+      </Text>
+    </View>
   );
 };
 

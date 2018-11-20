@@ -1,41 +1,20 @@
 import * as React from 'react';
-import styles from './styles';
+import chatBubbleStyles from './styles';
 import Message from '../Message';
 import { Author } from '../Author';
-import { LastSeenAvatarProps } from './../LastSeenAvatar';
-import { View, StyleProp, ViewStyle, TextStyle, Text } from 'react-native';
+import { LastSeenAvatarProps, LastSeenAvatarStyles } from './../LastSeenAvatar';
+import { View, StyleProp, ViewStyle, Text } from 'react-native';
 import Hoverable from './../Hoverable/index';
+import { ChatBubbleStyles } from './styles';
 
-const defaultBubbleStyles: ChatBubbleStyles = {
-  userBubble: {},
-  recipientBubble: {},
-  chatBubble: {},
-  text: {},
-  createdOn: {},
-  recipientCreatedOn: {},
-  loadingSpinnerColor: 'rgba(255, 255, 255, 0.55)',
-  isSendIconColor: '#cddc39',
-  systemChatBubbleContainerStyle: {}
-};
-export { defaultBubbleStyles };
-export interface ChatBubbleStyles {
-  userBubble?: StyleProp<ViewStyle>;
-  recipientBubble?: StyleProp<ViewStyle>;
-  userText?: StyleProp<TextStyle>;
-  recipientText?: StyleProp<TextStyle>;
-  chatBubble?: StyleProp<ViewStyle>;
-  text?: StyleProp<TextStyle>;
-  createdOn?: StyleProp<TextStyle>;
-  recipientCreatedOn?: StyleProp<TextStyle>;
-  loadingSpinnerColor?: string;
-  isSendIconColor?: string;
-  systemChatBubbleContainerStyle?: StyleProp<ViewStyle>;
-}
+export { ChatBubbleStyles };
 
 export interface ChatBubbleProps {
   message: Message;
   author?: Author;
-  bubbleStyles?: ChatBubbleStyles;
+  styles?: ChatBubbleStyles;
+  lastSeenAvatarStyles?: LastSeenAvatarStyles;
+
   bubblesCentered?: boolean;
   yourAuthorId: number;
   isFirstInGroup?: boolean;
@@ -62,37 +41,85 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
     if (!this.props.message) {
       return null;
     }
-    const { yourAuthorId } = this.props;
-    let { bubbleStyles } = this.props;
-    bubbleStyles = bubbleStyles || defaultBubbleStyles;
-    const { userBubble, chatBubble, text, recipientBubble } = bubbleStyles;
+
+    let {
+      lastSeenAvatarStyles,
+      yourAuthorId,
+      styles
+    } = this.props;
+
+    if (!styles) {
+      styles = {};
+    }
+    const {
+      userChatBubble,
+      chatBubble,
+      text,
+      userText,
+      recipientText,
+      recipientChatBubble,
+      firstChatBubbleInGroup,
+      userFirstChatBubbleInGroup,
+      recipientFirstChatBubbleInGroup,
+      centerChatBubbleInGroup,
+      userCenterChatBubbleInGroup,
+      recipientCenterChatBubbleInGroup,
+      lastChatBubbleInGroup,
+      userLastChatBubbleInGroup,
+      recipientLastChatBubbleInGroup,
+      userChatBubbleOrientationNormal,
+      recipientChatBubbleOrientationNormal,
+      chatBubbleWrapper,
+      createdOn,
+      userCreatedOn,
+      recipientCreatedOn,
+      isSendIconColor,
+      loadingSpinnerColor,
+      lastSeenByContainer
+    } = styles;
     const youAreAuthor = this.props.message.authorId === yourAuthorId;
 
     // message.id 0 is reserved for blue
-    const chatBubbleStyles: StyleProp<ViewStyle>[] = [
-      styles.chatBubble,
-      (youAreAuthor ? {} : styles.recipientChatBubble),
-      (youAreAuthor ? styles.chatBubbleOrientationNormal : styles.recipientChatBubbleOrientationNormal),
-      (this.props.isFirstInGroup && (youAreAuthor ? styles.firstChatBubbleInGroup : styles.recipientFirstChatBubbleInGroup)),
-      (this.props.isLastInGroup && (youAreAuthor ? styles.lastChatBubbleInGroup : styles.recipientLastChatBubbleInGroup)),
-      (this.props.isCenterInGroup && (youAreAuthor ? styles.centerChatBubbleInGroup : styles.recipientCenterChatBubbleInGroup)),
+    const finalChatBubbleStyles: StyleProp<ViewStyle>[] = [
+      chatBubbleStyles.chatBubble,
       chatBubble,
-      (youAreAuthor ? userBubble : recipientBubble),
-    ];
+      (youAreAuthor ? chatBubbleStyles.userChatBubble : chatBubbleStyles.recipientChatBubble),
+      (youAreAuthor ? userChatBubble : recipientChatBubble),
+      (youAreAuthor ? chatBubbleStyles.userChatBubbleOrientationNormal : chatBubbleStyles.recipientChatBubbleOrientationNormal),
+      (youAreAuthor ? userChatBubbleOrientationNormal : recipientChatBubbleOrientationNormal),
+      this.props.isFirstInGroup && chatBubbleStyles.firstChatBubbleInGroup,
+      (this.props.isFirstInGroup && (youAreAuthor ? chatBubbleStyles.userFirstChatBubbleInGroup : chatBubbleStyles.recipientFirstChatBubbleInGroup)),
+      (this.props.isCenterInGroup && chatBubbleStyles.centerChatBubbleInGroup),
+      (this.props.isCenterInGroup && (youAreAuthor ? chatBubbleStyles.userCenterChatBubbleInGroup : chatBubbleStyles.recipientCenterChatBubbleInGroup)),
+      (this.props.isLastInGroup && chatBubbleStyles.lastChatBubbleInGroup),
+      (this.props.isLastInGroup && (youAreAuthor ? chatBubbleStyles.userLastChatBubbleInGroup : chatBubbleStyles.recipientLastChatBubbleInGroup)),
+      this.props.isFirstInGroup && firstChatBubbleInGroup,
+      (this.props.isFirstInGroup && (youAreAuthor ? userFirstChatBubbleInGroup : recipientFirstChatBubbleInGroup)),
+      (this.props.isCenterInGroup && centerChatBubbleInGroup),
+      (this.props.isCenterInGroup && (youAreAuthor ? userCenterChatBubbleInGroup : recipientCenterChatBubbleInGroup)),
+      (this.props.isLastInGroup && lastChatBubbleInGroup),
+      (this.props.isLastInGroup && (youAreAuthor ? userLastChatBubbleInGroup : recipientLastChatBubbleInGroup)),
+    ].filter(i => i);
 
     return (
       <View
         style={[
-          styles.chatBubbleWrapper,
+          chatBubbleStyles.chatBubbleWrapper,
+          chatBubbleWrapper
         ]}
       >
-        <View style={[...chatBubbleStyles]}>
-          <Text style={[styles.p, text, (youAreAuthor ? bubbleStyles.userText : bubbleStyles.recipientText)]}>{this.props.message.message}</Text>
+        <View style={[...finalChatBubbleStyles]}>
+          <Text
+            style={[chatBubbleStyles.text, text, (youAreAuthor ? userText : recipientText)]}
+          >{this.props.message.message}
+          </Text>
           {this.props.message.createdOn && (
             <Text
               style={[
-                styles.createdOn,
-                (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
+                chatBubbleStyles.createdOn,
+                createdOn,
+                (youAreAuthor ? chatBubbleStyles.userCreatedOn : chatBubbleStyles.recipientCreatedOn),
+                (youAreAuthor ? userCreatedOn : recipientCreatedOn)
               ]}
             /*title={this.props.message.createdOn.toLocaleString()}*/
             >{this.props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
@@ -101,7 +128,7 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
           {this.props.message.isSend !== undefined && youAreAuthor && (
             <Text
               style={[
-                styles.isSend,
+                chatBubbleStyles.isSend,
               ]}
             /*title={this.props.message.isSend ? 'Send' : 'Sending'}*/
             >
@@ -115,7 +142,7 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
                   style={{ background: 'none' }}
                 >
                   <path
-                    fill={bubbleStyles.isSendIconColor ? bubbleStyles.isSendIconColor : defaultBubbleStyles.isSendIconColor}
+                    fill={isSendIconColor ? isSendIconColor : chatBubbleStyles.isSendIconColor}
                     {/* tslint:disable-next-line:max-line-length*/...{}}
                     d="M9,1.7L8.6,1.4C8.5,1.3,8.3,1.3,8.2,1.4L3.9,7C3.8,7.1,3.6,7.1,3.5,7c0,0,0,0,0,0L1.7,5.3c-0.1-0.1-0.3-0.1-0.4,0L1,5.6 C0.9,5.7,0.9,5.9,1,6l2.6,2.6c0.1,0.1,0.3,0.1,0.4,0L9,2.1C9.1,2,9.1,1.8,9,1.7z"
                   />
@@ -133,7 +160,7 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
                   <path
                     stroke="none"
                     d="M10 50A40 40 0 0 0 90 50A40 45 0 0 1 10 50"
-                    fill={bubbleStyles.loadingSpinnerColor ? bubbleStyles.loadingSpinnerColor : defaultBubbleStyles.loadingSpinnerColor}
+                    fill={loadingSpinnerColor ? loadingSpinnerColor : chatBubbleStyles.loadingSpinnerColor}
                     transform="rotate(78 50 52.5)"
                   >
                     <animateTransform
@@ -160,7 +187,7 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
               onHoverOut={() => this.setState({ mouseOverLastSeenContainer: false })}
             >
               <View
-                style={styles.lastSeenByContainer}
+                style={[chatBubbleStyles.lastSeenByContainer, lastSeenByContainer]}
                 onTouchStart={() => this.setState({ mouseOverLastSeenContainer: true })}
                 onTouchEnd={() => setTimeout(() => this.setState({ mouseOverLastSeenContainer: false }), 2000)}
               >
@@ -168,8 +195,12 @@ export default class ChatBubble extends React.PureComponent<ChatBubbleProps, Cha
                   <this.props.customLastSeenAvatar
                     key={i}
                     author={a}
-                    containerStyle={{
-                      ...(i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }),
+                    styles={{
+                      ...lastSeenAvatarStyles,
+                      container: {
+                        ...(lastSeenAvatarStyles ? lastSeenAvatarStyles.container as Object : {}),
+                        ...(i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }),
+                      },
                     }}
                   />
                 ))}

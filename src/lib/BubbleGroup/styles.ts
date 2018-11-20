@@ -1,20 +1,15 @@
-import * as React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 
 export interface BubbleGroupStyles {
-  chatBubbleWrapper: React.CSSProperties;
-  bubbleGroupHeader: React.CSSProperties;
+  chatBubbleWrapper?: StyleProp<ViewStyle>;
 }
 
-export default {
+const styles: BubbleGroupStyles = {
   chatBubbleWrapper: {
     marginTop: 10,
     marginBottom: 10,
     position: 'relative',
-  },
-  bubbleGroupHeader: {
-    margin: 0,
-    fontSize: 14,
-    fontWeight: 400,
-    color: '#999',
-  },
-} as BubbleGroupStyles;
+  }
+};
+
+export default styles;

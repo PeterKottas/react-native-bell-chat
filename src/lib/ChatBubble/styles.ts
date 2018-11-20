@@ -1,6 +1,37 @@
 import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
-const styles = {
+export interface ChatBubbleStyles {
+  chatBubbleWrapper?: StyleProp<ViewStyle>;
+  chatBubble?: StyleProp<ViewStyle>;
+  systemChatBubbleContainer?: StyleProp<ViewStyle>;
+  systemChatBubbleText?: StyleProp<ViewStyle>;
+  userChatBubbleOrientationNormal?: StyleProp<ViewStyle>;
+  recipientChatBubbleOrientationNormal?: StyleProp<ViewStyle>;
+  text?: StyleProp<TextStyle>;
+  userText?: StyleProp<TextStyle>;
+  recipientText?: StyleProp<TextStyle>;
+  userChatBubble?: StyleProp<ViewStyle>;
+  recipientChatBubble?: StyleProp<ViewStyle>;
+  firstChatBubbleInGroup?: StyleProp<ViewStyle>;
+  userFirstChatBubbleInGroup?: StyleProp<ViewStyle>;
+  recipientFirstChatBubbleInGroup?: StyleProp<ViewStyle>;
+  lastChatBubbleInGroup?: StyleProp<ViewStyle>;
+  userLastChatBubbleInGroup?: StyleProp<ViewStyle>;
+  recipientLastChatBubbleInGroup?: StyleProp<ViewStyle>;
+  centerChatBubbleInGroup?: StyleProp<ViewStyle>;
+  userCenterChatBubbleInGroup?: StyleProp<ViewStyle>;
+  recipientCenterChatBubbleInGroup?: StyleProp<ViewStyle>;
+  createdOn?: StyleProp<TextStyle>;
+  recipientCreatedOn?: StyleProp<TextStyle>;
+  userCreatedOn?: StyleProp<TextStyle>;
+  isSend?: StyleProp<TextStyle>;
+
+  lastSeenByContainer?: StyleProp<ViewStyle>;
+  loadingSpinnerColor?: string;
+  isSendIconColor?: string;
+}
+
+const styles: ChatBubbleStyles = {
   chatBubbleWrapper: {
     position: 'relative',
     marginBottom: 2,
@@ -19,35 +50,35 @@ const styles = {
     paddingRight: 14,
     // boxShadow: 'rgba(0, 0, 0, 0.3) 2px 2px 2px'
   } as StyleProp<ViewStyle>,
-  chatBubbleOrientationNormal: {
+  userChatBubbleOrientationNormal: {
     marginRight: 0,
-  } as StyleProp<ViewStyle>,
-  recipientChatBubble: {
-    backgroundColor: '#ccc',
   } as StyleProp<ViewStyle>,
   recipientChatBubbleOrientationNormal: {
     marginLeft: 0,
   } as StyleProp<ViewStyle>,
-  p: {
+  recipientChatBubble: {
+    backgroundColor: '#ccc',
+  } as StyleProp<ViewStyle>,
+  text: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '300',
     margin: 0,
     marginRight: 30
   } as StyleProp<TextStyle>,
-  firstChatBubbleInGroup: {
+  userFirstChatBubbleInGroup: {
     borderTopRightRadius: 0
   } as StyleProp<ViewStyle>,
   recipientFirstChatBubbleInGroup: {
     borderTopLeftRadius: 0
   } as StyleProp<ViewStyle>,
-  lastChatBubbleInGroup: {
+  userLastChatBubbleInGroup: {
     borderTopRightRadius: 0
   } as StyleProp<ViewStyle>,
   recipientLastChatBubbleInGroup: {
     borderTopLeftRadius: 0
   } as StyleProp<ViewStyle>,
-  centerChatBubbleInGroup: {
+  userCenterChatBubbleInGroup: {
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0
   } as StyleProp<ViewStyle>,
@@ -74,6 +105,8 @@ const styles = {
     top: 0,
     width: 20,
     height: '100%',
-  } as StyleProp<ViewStyle>
+  } as StyleProp<ViewStyle>,
+  loadingSpinnerColor: 'rgba(255, 255, 255, 0.55)',
+  isSendIconColor: '#cddc39',
 };
 export default styles;

@@ -6,7 +6,7 @@ import * as React from 'react';
 import BubbleGroup from '../BubbleGroup';
 import DefaultChatBubble, { ChatBubbleProps } from '../ChatBubble';
 import Message from '../Message';
-import styles from './styles';
+import chatStyles from './styles';
 import { Author } from '../Author';
 import { ChatBubbleStyles } from '../ChatBubble/';
 import Avatar, { AvatarProps } from '../Avatar';
@@ -17,9 +17,25 @@ import { groupBy } from '../utils/utils';
 import DateRow, { DateRowProps } from '../DateRow';
 import LoadingMessages, { LoadingMessagesProps } from '../LoadingMessages';
 import SystemChatBubble from '../SystemChatBubble';
-import { View, StyleProp, ViewStyle } from 'react-native';
+import { View } from 'react-native';
+import { AvatarStyles } from './../Avatar/index';
+import { DateRowStyles } from './../DateRow/index';
+import { LoadingMessagesStyle } from './../LoadingMessages/index';
+import { IsTypingStyles } from './../IsTyping/index';
+import { ChatFeedStyles } from './styles';
+import { ChatScrollAreaStyles } from './../ChatScrollArea/index';
 
 // Model for ChatFeed props.
+
+export interface ChatStyles {
+  bubbleStyles?: ChatBubbleStyles;
+  chatScrollArea?: ChatScrollAreaStyles;
+  avatarStyles?: AvatarStyles;
+  dateRowStyles?: DateRowStyles;
+  loadingMessagesStyle?: LoadingMessagesStyle;
+  isTypingStyles?: IsTypingStyles;
+  chatFeedStyles?: ChatFeedStyles;
+}
 
 export interface ChatFeedProps {
   // Structural props
@@ -34,7 +50,7 @@ export interface ChatFeedProps {
 
   // Visual props
   bubblesCentered?: boolean;
-  bubbleStyles?: ChatBubbleStyles;
+  styles?: ChatStyles;
   maxHeight?: string | number;
   minHeight?: string | number;
 
@@ -44,11 +60,6 @@ export interface ChatFeedProps {
   showRecipientLastSeenMessage?: boolean;
   showIsTyping?: boolean;
   showLoadingMessages?: boolean;
-
-  // Extra container styles for custom components
-  showRecipientAvatarChatMessagesStyle?: StyleProp<ViewStyle>;
-  showRecipientLastSeenMessageChatMessagesStyle?: StyleProp<ViewStyle>;
-  showIsTypingChatMessagesStyle?: StyleProp<ViewStyle>;
 
   // Custom components
   customLoadingMessages?: (props: LoadingMessagesProps) => JSX.Element;
@@ -143,7 +154,12 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
    * Determines what type of message/messages to render.
    */
   renderMessages(messages: Message[]) {
-    const { bubbleStyles, customChatBubble, showRecipientAvatar } = this.props;
+    let { styles } = this.props;
+    if (!styles) {
+      styles = {};
+    }
+    const { bubbleStyles, dateRowStyles } = styles;
+    const { customChatBubble, showRecipientAvatar } = this.props;
 
     // First group by days
     const groups = groupBy(messages, item => item.createdOn && item.createdOn.toDateString());
@@ -153,7 +169,7 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
       let group = [];
       const messagesGroup = groups[key];
       if (messagesGroup[0] && messagesGroup[0].createdOn && this.props.showDateRow) {
-        messageNodes.push(<this.props.customDateRow key={key} date={messagesGroup[0].createdOn} />);
+        messageNodes.push(<this.props.customDateRow key={key} date={messagesGroup[0].createdOn} styles={dateRowStyles} />);
       }
       messageNodes = messageNodes.concat(messagesGroup.map((message, index) => {
         group.push(message);
@@ -187,21 +203,35 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
   }
 
   renderIsTyping() {
+    let { styles } = this.props;
+    if (!styles) {
+      styles = {};
+    }
+    const { isTypingStyles } = styles;
     const typingAuthors = this.props.authors && this.props.authors.filter(a => a.isTyping && a.id !== this.props.yourAuthorId);
     if (!typingAuthors || typingAuthors.length === 0) {
       return null;
     }
-    return <IsTyping typingAuthors={typingAuthors} />;
+    return <IsTyping typingAuthors={typingAuthors} styles={isTypingStyles} />;
   }
 
   /**
    * render : renders our chat feed
    */
   render() {
+    let { styles } = this.props;
+    if (!styles) {
+      styles = {};
+    }
+    const {
+      loadingMessagesStyle,
+      chatFeedStyles,
+      chatScrollArea
+    } = styles;
     return (
       <View
         style={[
-          styles.chatPanel
+          chatStyles.chatPanel
         ]}
       >
         <this.props.customScrollArea
@@ -210,19 +240,23 @@ export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFee
           apiRef={e => this.scrollApi = e}
           loadOldMessagesThreshold={this.props.loadOldMessagesThreshold}
           onLoadOldMessages={this.onLoadOldMessages}
+          styles={chatScrollArea}
         >
           <View
             style={[
-              styles.chatMessages,
-              (this.props.showRecipientAvatar && styles.showRecipientAvatarChatMessagesStyle),
-              (this.props.showRecipientAvatar && this.props.showRecipientAvatarChatMessagesStyle),
-              (this.props.showIsTyping && styles.showIsTypingChatMessagesStyle),
-              (this.props.showIsTyping && this.props.showIsTypingChatMessagesStyle),
-              (this.props.showRecipientLastSeenMessage && styles.showRecipientLastSeenMessageChatMessagesStyle),
-              (this.props.showRecipientLastSeenMessage && this.props.showRecipientLastSeenMessageChatMessagesStyle),
+              chatStyles.chatMessages,
+              (this.props.showRecipientAvatar && chatStyles.showRecipientAvatarChatMessagesStyle),
+              (this.props.showRecipientAvatar && chatFeedStyles && chatFeedStyles.showRecipientAvatarChatMessagesStyle),
+              (this.props.showIsTyping && chatStyles.showIsTypingChatMessagesStyle),
+              (this.props.showIsTyping && chatFeedStyles && chatFeedStyles.showIsTypingChatMessagesStyle),
+              (this.props.showRecipientLastSeenMessage && chatStyles.showRecipientLastSeenMessageChatMessagesStyle),
+              (this.props.showRecipientLastSeenMessage && chatFeedStyles && chatFeedStyles.showRecipientLastSeenMessageChatMessagesStyle),
             ]}
           >
-            {<this.props.customLoadingMessages isVisible={this.props.showLoadingMessages || this.state.isLoadingMessages} />}
+            <this.props.customLoadingMessages
+              isVisible={this.props.showLoadingMessages || this.state.isLoadingMessages}
+              styles={loadingMessagesStyle}
+            />
             {this.renderMessages(this.props.messages)}
             {this.props.showIsTyping && this.renderIsTyping()}
           </View>

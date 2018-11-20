@@ -4,11 +4,15 @@ import { StyleProp, ViewStyle, View, Text, TextStyle } from 'react-native';
 
 export interface LastSeenAvatarProps {
   author: Author;
-  containerStyle?: StyleProp<ViewStyle>;
-  textStyle?: StyleProp<TextStyle>;
+  styles: LastSeenAvatarStyles;
 }
 
-const styles = {
+export interface LastSeenAvatarStyles {
+  container?: StyleProp<ViewStyle>;
+  text?: StyleProp<TextStyle>;
+}
+
+const lastSeenAvatarStyles: LastSeenAvatarStyles = {
   container: {
     width: 20,
     height: 20,
@@ -24,25 +28,35 @@ const styles = {
     lineHeight: 20,
     fontWeight: '400',
     textAlign: 'center'
-  } as StyleProp<TextStyle>
+  }
 };
 
-const LastSeenAvatar: React.SFC<LastSeenAvatarProps> = props => props.author && (
-  <View
-    style={[
-      styles.container,
-      props.containerStyle
-    ]}
-  >
-    <Text
-      style={[styles.text, props.textStyle]}
-    >{
-        props.author.lastSeenAvatarName ?
-          props.author.lastSeenAvatarName
-          :
-          props.author.name[0].toUpperCase()}
-    </Text>
-  </View>
-);
+const LastSeenAvatar: React.SFC<LastSeenAvatarProps> = props => {
+  let { styles } = props;
+  if (!styles) {
+    styles = {};
+  }
+  const { 
+    container, 
+    text 
+  } = styles;
+  return props.author && (
+    <View
+      style={[
+        lastSeenAvatarStyles.container,
+        container
+      ]}
+    >
+      <Text
+        style={[lastSeenAvatarStyles.text, text]}
+      >{
+          props.author.lastSeenAvatarName ?
+            props.author.lastSeenAvatarName
+            :
+            props.author.name[0].toUpperCase()}
+      </Text>
+    </View>
+  );
+};
 
 export default LastSeenAvatar;

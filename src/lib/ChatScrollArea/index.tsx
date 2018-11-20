@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { ScrollView, View, StyleProp, ViewStyle } from 'react-native';
 
-const styles: { [key: string]: StyleProp<ViewStyle> } = {
-  chatHistory: {
+export interface ChatScrollAreaStyles {
+  container?: StyleProp<ViewStyle>;
+}
+
+const chatScrollAreaStyles: ChatScrollAreaStyles = {
+  container: {
     padding: '0 10px',
     // flexDirection: 'column-reverse'
   }
@@ -12,7 +16,7 @@ export interface ChatScrollAreaProps {
   maxHeight?: string | number;
   minHeight?: string | number;
   children?: JSX.Element | JSX.Element[];
-  containerStyles?: StyleProp<ViewStyle>;
+  styles?: ChatScrollAreaStyles;
   apiRef?: (api: ChatScrollAreaApi) => void;
   loadOldMessagesThreshold: number;
   onLoadOldMessages: () => Promise<void>;
@@ -42,6 +46,11 @@ export class ChatScrollArea extends React.PureComponent<ChatScrollAreaProps> {
   }
 
   public render() {
+    let { styles } = this.props;
+    if (!styles) {
+      styles = {};
+    }
+    const { container } = styles;
     return (
       <ScrollView
         onLayout={event => {
@@ -67,10 +76,10 @@ export class ChatScrollArea extends React.PureComponent<ChatScrollAreaProps> {
           });
         }}
         style={[
-          styles.chatHistory,
+          chatScrollAreaStyles.container,
           (this.props.maxHeight !== undefined ? { maxHeight: this.props.maxHeight } : {}),
           (this.props.minHeight !== undefined ? { minHeight: this.props.minHeight } : {}),
-          this.props.containerStyles
+          container
         ]}
         onScroll={e => {
           if (this.scrollContainer && e.nativeEvent.contentOffset.y <= this.props.loadOldMessagesThreshold) {
