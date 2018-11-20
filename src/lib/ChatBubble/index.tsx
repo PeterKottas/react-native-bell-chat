@@ -4,6 +4,7 @@ import Message from '../Message';
 import { Author } from '../Author';
 import { LastSeenAvatarProps } from './../LastSeenAvatar';
 import { View, StyleProp, ViewStyle, TextStyle, Text } from 'react-native';
+import Hoverable from './../Hoverable/index';
 
 const defaultBubbleStyles: ChatBubbleStyles = {
   userBubble: {},
@@ -49,7 +50,7 @@ export interface ChatBubbleState {
   mouseOverLastSeenContainer: boolean;
 }
 
-export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBubbleState> {
+export default class ChatBubble extends React.PureComponent<ChatBubbleProps, ChatBubbleState> {
   constructor(props: ChatBubbleProps) {
     super(props);
     this.state = {
@@ -86,14 +87,14 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
         ]}
       >
         <View style={[...chatBubbleStyles]}>
-          <Text style={[ styles.p, text, (youAreAuthor ? bubbleStyles.userText : bubbleStyles.recipientText) ]}>{this.props.message.message}</Text>
+          <Text style={[styles.p, text, (youAreAuthor ? bubbleStyles.userText : bubbleStyles.recipientText)]}>{this.props.message.message}</Text>
           {this.props.message.createdOn && (
             <Text
               style={[
                 styles.createdOn,
                 (youAreAuthor ? bubbleStyles.createdOn : bubbleStyles.recipientCreatedOn)
               ]}
-              /*title={this.props.message.createdOn.toLocaleString()}*/
+            /*title={this.props.message.createdOn.toLocaleString()}*/
             >{this.props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
             </Text>
           )}
@@ -102,7 +103,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
               style={[
                 styles.isSend,
               ]}
-              /*title={this.props.message.isSend ? 'Send' : 'Sending'}*/
+            /*title={this.props.message.isSend ? 'Send' : 'Sending'}*/
             >
               {this.props.message.isSend ?
                 <svg
@@ -154,23 +155,26 @@ export default class ChatBubble extends React.Component<ChatBubbleProps, ChatBub
         {this.props.showRecipientLastSeenMessage && this.props.lastSeenByAuthors &&
           this.props.lastSeenByAuthors.length > 0 && this.props.customLastSeenAvatar &&
           (
-            <View
-              style={styles.lastSeenByContainer}
-              /*onMouseEnter={() => this.setState({ mouseOverLastSeenContainer: true })}
-              onMouseLeave={() => this.setState({ mouseOverLastSeenContainer: false })}
-              title={'Last seen by ' + this.props.lastSeenByAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and')}*/
+            <Hoverable
+              onHoverIn={() => this.setState({ mouseOverLastSeenContainer: true })}
+              onHoverOut={() => this.setState({ mouseOverLastSeenContainer: false })}
             >
-              {this.props.lastSeenByAuthors.map((a, i) => (
-                <this.props.customLastSeenAvatar
-                  key={i}
-                  author={a}
-                  containerStyle={{
-                    ...(i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }),
-                    zIndex: 100 + i
-                  }}
-                />
-              ))}
-            </View>
+              <View
+                style={styles.lastSeenByContainer}
+                onTouchStart={() => this.setState({ mouseOverLastSeenContainer: true })}
+                onTouchEnd={() => setTimeout(() => this.setState({ mouseOverLastSeenContainer: false }), 2000)}
+              >
+                {this.props.lastSeenByAuthors.map((a, i) => (
+                  <this.props.customLastSeenAvatar
+                    key={i}
+                    author={a}
+                    containerStyle={{
+                      ...(i > 0 && !this.state.mouseOverLastSeenContainer ? { marginTop: -12 } : { marginTop: -4 }),
+                    }}
+                  />
+                ))}
+              </View>
+            </Hoverable>
           )}
       </View>
     );

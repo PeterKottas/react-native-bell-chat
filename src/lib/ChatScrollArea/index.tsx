@@ -28,7 +28,7 @@ export interface ChatScrollAreaApi {
   scrolledToLoadThreshold: () => boolean; // Check if we are scrolled to threshold where we need to load messages
 }
 
-export class ChatScrollArea extends React.Component<ChatScrollAreaProps> {
+export class ChatScrollArea extends React.PureComponent<ChatScrollAreaProps> {
   private scrollContainer: ScrollView;
   private clientHeight: number;
   private scrollHeight: number;

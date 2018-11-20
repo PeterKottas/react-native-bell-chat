@@ -23,6 +23,7 @@ const styles = {
     fontSize: 10,
     lineHeight: 20,
     fontWeight: '400',
+    textAlign: 'center'
   } as StyleProp<TextStyle>
 };
 

@@ -22,7 +22,7 @@ export interface ChatInputProps {
   inputPlaceholder?: string;
 }
 
-const ChatInput = (props: ChatInputProps) => {
+const ChatInput: React.SFC<ChatInputProps> = props => {
   const { inputStyles, inputPlaceholder } = props;
   return (
     <View style={styles.chatInput}>

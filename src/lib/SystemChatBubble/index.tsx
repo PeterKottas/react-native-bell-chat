@@ -13,7 +13,7 @@ const styles = {
 export interface SystemChatBubbleProps extends ChatBubbleProps {
 }
 
-const SystemChatBubble = (props: SystemChatBubbleProps) => {
+const SystemChatBubble: React.SFC<SystemChatBubbleProps> = props => {
   let { bubbleStyles } = props;
   bubbleStyles = bubbleStyles || defaultBubbleStyles;
   const time = props.message.createdOn && props.message.createdOn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });

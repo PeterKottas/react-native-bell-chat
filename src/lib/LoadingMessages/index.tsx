@@ -14,7 +14,7 @@ export interface LoadingMessagesProps {
   isVisible: boolean;
 }
 
-const LoadingMessages: React.SFC<LoadingMessagesProps> = (props: LoadingMessagesProps) => {
+const LoadingMessages: React.SFC<LoadingMessagesProps> = props => {
   const { containerStyles } = props;
   return (
     <View style={[ styles.containerStyles, containerStyles ]}>

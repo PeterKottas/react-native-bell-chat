@@ -5,7 +5,7 @@ export default {
   chatPanel: {
     display: 'flex',
     flexDirection: 'column',
-    flex: 1,
+    flexGrow: 1,
     overflow: 'hidden',
     position: 'relative'
   } as StyleProp<ViewStyle>,

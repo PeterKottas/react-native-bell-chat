@@ -17,7 +17,7 @@ export interface IsTypingProps {
   typingAuthors: Author[];
 }
 
-const IsTyping = (props: IsTypingProps) => {
+const IsTyping: React.SFC<IsTypingProps> = props => {
   return props.typingAuthors && props.typingAuthors.length > 0 && (
     <Text style={styles.container}>
       {props.typingAuthors.map(a => a.name).join(', ').replace(/,(?!.*,)/gmi, ' and') + (props.typingAuthors.length === 1 ? ' is ' : ' are ') + 'typing'}

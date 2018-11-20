@@ -22,7 +22,7 @@ export interface BubbleGroupProps {
   showRecipientLastSeenMessage?: boolean;
 }
 
-export default class BubbleGroup extends React.Component<BubbleGroupProps> {
+export default class BubbleGroup extends React.PureComponent<BubbleGroupProps> {
   public static defaultProps: BubbleGroupProps = {
     messages: [],
     author: undefined,

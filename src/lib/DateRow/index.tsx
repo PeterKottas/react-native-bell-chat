@@ -14,7 +14,7 @@ export interface DateRowProps {
   containerStyles?: StyleProp<TextStyle>;
 }
 
-const DateRow = (props: DateRowProps) => {
+const DateRow: React.SFC<DateRowProps> = props => {
   return props.date && (
     <Text
       style={[

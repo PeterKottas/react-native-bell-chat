@@ -85,7 +85,7 @@ export interface ChatFeedSnapshot {
 }
 
 // React component to render a complete chat feed
-export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedState> implements ChatFeedApi {
+export default class ChatFeed extends React.PureComponent<ChatFeedProps, ChatFeedState> implements ChatFeedApi {
   public static defaultProps: ChatFeedProps = {
     messages: [],
     authors: [],
@@ -114,13 +114,6 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
     this.scrollApi && this.scrollApi.scrollToBottom();
   }
 
-  shouldComponentUpdate(nextProps: ChatFeedProps, nextState: ChatFeedState) {
-    return (
-      this.shallowDiffers(this.props, nextProps) ||
-      this.shallowDiffers(this.state, nextState)
-    );
-  }
-
   componentDidMount() {
     this.scrollApi && this.scrollApi.scrollToBottom(false);
   }
@@ -144,20 +137,6 @@ export default class ChatFeed extends React.Component<ChatFeedProps, ChatFeedSta
       const scrollHeight = this.scrollApi && this.scrollApi.scrollHeight();
       this.scrollApi.scrollTo(scrollHeight - snapshot.scrollHeight, false);
     }
-  }
-
-  shallowDiffers(a: object, b: object) {
-    for (let i in a) {
-      if (!(i in b)) {
-        return true;
-      }
-    }
-    for (let i in b) {
-      if (a[i] !== b[i]) {
-        return true;
-      }
-    }
-    return false;
   }
 
   /**
